@@ -1,9 +1,9 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
-  var matchtable = sequelize.define('matchtable', {
-    userid: DataTypes.INTEGAR,
-    name: DataTypes.STRING,
-    smoke: DataTypes.BOOLEAN
+  var matchnow = sequelize.define('matchnow', {
+    matchname: DataTypes.STRING,
+    smoke: DataTypes.BOOLEAN,
+    userId: DataTypes.INTEGER
   }, {
     classMethods: {
       associate: function(models) {
@@ -11,5 +11,5 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
-  return matchtable;
+  return matchnow;
 };
