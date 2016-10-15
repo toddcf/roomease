@@ -1,23 +1,25 @@
-<h1>Find a Compatible Roommate</h1>
+<h1>Match Me Today</h1>
 
 
 <form action="/create" method="POST">
 
   <div class="form-group">
-    <label>Username:</label>
+    <label>What's your name</label>
     <input type="text" name="name">
 
     <label>Do you smoke?</label>
     <input type="text" name="smoke">
 
-    <label>How important is this to you?</label>
+
+    <label>Rate your smoke</label>
     <input type="text" name="smokerate">
 
+
   </div>
-  <button type="submit">Create User</button>
+  <button type="submit">Create a New Database</button>
 </form>
 
-<h1> Update My Account </h1>
+<h1> Update Me </h1>
 
 
 <ul>
@@ -29,7 +31,7 @@
          <form action="/update/{{this.id}}?_method=PUT" method="POST">
     			<label>Do you smoke?</label>
    				<input type="text" name="smoke">
-    			<label>How important is this to you?</label>
+    			<label>Rate your smoke</label>
     			<input type="text" name="smokerate">
        	 		<button type="submit">Update</button>
         </form>
@@ -39,3 +41,6 @@
       </li>
   {{/each}}
 </ul>
+
+
+
