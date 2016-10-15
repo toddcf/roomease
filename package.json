@@ -19,5 +19,18 @@
     "sequelize": "^3.24.3",
     "sequelize-cli": "^1.7.1",
     "serve-favicon": "~2.3.0"
-  }
+  },
+  "description": "This is a SuperMaster",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toddcf/dom-traversers.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/toddcf/dom-traversers/issues"
+  },
+  "homepage": "https://github.com/toddcf/dom-traversers#readme"
 }
