@@ -1,5 +1,6 @@
 var friends = [
 {
+	userEmail: "colinm",
 	name: "Colin",
 	scores: [
 		[true,"same"],
@@ -8,11 +9,39 @@ var friends = [
 	]
 },
 {
+	userEmail: "michellel",
+	name: "Michelle",
+	scores: [
+		[true,"dgaf"],
+		[true,"dgaf"],
+		[true,"same"]
+	]
+},
+{
+	userEmail: "stepho",
 	name: "Stephanie",
 	scores: [
 		[true,"same"],
 		[false,"same"],
 		[false,"same"]
+	]
+},
+{
+	userEmail: "omarp",
+	name: "Omar",
+	scores: [
+		[true,"opposite"],
+		[false,"dgaf"],
+		[false,"opposite"]
+	]
+},
+{
+	userEmail: "jeffm",
+	name: "Jeff",
+	scores: [
+		[false,"same"],
+		[false,"opposite"],
+		[false,"dgaf"]
 	]
 }];
 
@@ -109,6 +138,7 @@ var evaluateQuestion = function(userAIndex,userBIndex,qIndex){
     return percentCompatible;
 };
 
+//function for rounding
 var roundedAverage = function(arr){
     var sum = 0;
 
@@ -118,6 +148,7 @@ var roundedAverage = function(arr){
     return Math.round(sum/arr.length);
 };
 
+//function finds the compatibility between 2 users: userAIndex and userBIndex
 var totalCompatibility = function(userAIndex,userBIndex){
     if(friends[userAIndex].scores.length == friends[userBIndex].scores.length){
         var compatibilityByQuestion = [];
@@ -133,5 +164,51 @@ var totalCompatibility = function(userAIndex,userBIndex){
         console.log("Users have answered a different number of questions, so cannot evaluate compatibility.");
 }
 
+//in the command line you write "node matchingAlgorithm.js [userEmail]" ex: colinm
+var thisUser = process.argv[2];
+//for now current user is set by what you enter into the command line as the 3rd argument
+var currentUser;
+var x; //this is the index of current user
 
-console.log(totalCompatibility(0,1));
+//stores the current user
+for (var i=0; i<friends.length; i++){
+	if (friends[i].userEmail == thisUser) {
+		currentUser = friends[i];
+		x = i; //storing the index of current user	
+	}
+}
+
+//console.log("ME: "+currentUser.name);
+var matchArray = [];
+
+//goes through and gets compatibility of current user and each other friend
+for (var i=0; i<friends.length; i++){
+	if (friends[i] == currentUser){
+		continue;
+	}else {
+		matchArray.push({"friendData": friends[i], "compat": totalCompatibility(x, i)});
+		//console.log("Roommate: "+friends[i].userEmail);
+		//console.log("Our compatibility: "+totalCompatibility(x, i)+"%");
+	}
+}
+
+//sorts the array from highest to lowest compatibility
+matchArray.sort(function(low, high) {
+    return parseFloat(high.compat) - parseFloat(low.compat);
+});
+
+// console.log(matchArray);
+
+console.log(currentUser.name+"'s top matches:");
+for (i=0; i<matchArray.length; i++){
+	console.log((i+1)+". "+matchArray[i].friendData.name+": "+matchArray[i].compat+"% compatible");
+}
+
+
+
+
+
+
+
+
+
