@@ -1,12 +1,44 @@
 <h1>Match Me Today</h1>
 
+
+<form action="/create" method="POST">
+
+  <div class="form-group">
+    <label>What's your name</label>
+    <input type="text" name="name">
+
+    <label>Do you smoke?</label>
+    <input type="text" name="smoke">
+
+
+    <label>Rate your smoke</label>
+    <input type="text" name="smokerate">
+
+
+  </div>
+  <button type="submit">Create a New Database</button>
+</form>
+
+<h1> Update Me </h1>
+
+
 <ul>
   {{#each matchtable}}
-    {{#if this.smoke}}
       <li>
         {{this.matchname}}
+        {{this.smoke}}
+        {{this.smokerate}}
+         <form action="/update/{{this.id}}?_method=PUT" method="POST">
+    			<label>Do you smoke?</label>
+   				<input type="text" name="smoke">
+    			<label>Rate your smoke</label>
+    			<input type="text" name="smokerate">
+       	 		<button type="submit">Update</button>
+        </form>
+        <form action="/delete/{{this.id}}?_method=DELETE" method="POST">
+         	<button type="submit">DELETE ME</button>
+         </form>
       </li>
-    {{/if}}
   {{/each}}
 </ul>
 
