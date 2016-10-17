@@ -52,3 +52,31 @@ form label {
 h3 {
 	text-align: left;
 }
+
+.reIcon {
+	height: 100%%;
+	width: 100%;
+}
+
+.aboutRow {
+	padding-top: 25px;
+}
+
+.description {
+	display: inline;
+	margin: 0 auto;
+}
+
+#firstName {
+	width: 49%;
+	float: left;
+}
+
+#lastName {
+	width: 49%;
+	float: right;
+}
+
+#emailAddress {
+	clear: both;
+}
