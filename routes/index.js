@@ -2,8 +2,12 @@ var express = require('express');
 var models  = require('../models');
 var router = express.Router();
 
-
 router.get('/', function(req, res) {
+  res.redirect('/index');
+});
+
+
+router.get('/index', function(req, res) {
   models.matchtable.findAll({
   })
   .then(function(matchtable) {
@@ -11,6 +15,11 @@ router.get('/', function(req, res) {
       matchtable:matchtable
     });
   });
+});
+
+
+router.get('/survey', function(req, res) {
+    res.render('survey');
 });
 
 
