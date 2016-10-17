@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "guagua",
+    "password": "vanilla.123",
     "database": "matchme_db",
     "host": "127.0.0.1",
     "dialect": "mysql"

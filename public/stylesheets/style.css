@@ -1,8 +1,54 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+#jumbohead{
+	background-color: #072f26;
+	height: 15%;
+	border-bottom: solid #8dc8b4 10px;
+}
+#jumbohead h1 {
+	color: white;
 }
 
-a {
-  color: #00B7FF;
+.bracket {
+	color: #8dc8b4;
+	padding: 2px;
+}
+
+.formlabels {
+	color: #8dc8b4;
+}
+
+#bottomgroup {
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+#signInButton, #signUpButton {
+	background-color: #4b907b;
+	border: #4b907b;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+}
+
+#signInButton:hover {
+	background-color: #c7ddda;
+	border: #c7ddda;
+	font-weight: bold;
+	color: #072f26;
+	text-align: center;
+}
+
+#signUpButton:hover {
+	background-color: #072f26;
+	border: #072f26;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+}
+
+form label {
+	color: white;
+}
+
+h3 {
+	text-align: left;
 }
