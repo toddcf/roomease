@@ -23,6 +23,11 @@ router.get('/survey', function(req, res) {
 });
 
 
+router.get('/results',function(req,res){
+  res.render('results');
+});
+
+
 router.post('/create', function(req, res){
   models.matchtable.create({
     matchname:req.body.name,
