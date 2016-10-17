@@ -29,18 +29,15 @@
         {{this.smoke}}
         {{this.smokerate}}
          <form action="/update/{{this.id}}?_method=PUT" method="POST">
-    			<label>Do you smoke?</label>
-   				<input type="text" name="smoke">
-    			<label>Rate your smoke</label>
-    			<input type="text" name="smokerate">
-       	 		<button type="submit">Update</button>
+          <label>Do you smoke?</label>
+          <input type="text" name="smoke">
+          <label>Rate your smoke</label>
+          <input type="text" name="smokerate">
+            <button type="submit">Update</button>
         </form>
         <form action="/delete/{{this.id}}?_method=DELETE" method="POST">
-         	<button type="submit">DELETE ME</button>
+          <button type="submit">DELETE ME</button>
          </form>
       </li>
   {{/each}}
 </ul>
-
-
-
