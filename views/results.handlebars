@@ -18,7 +18,15 @@
             {{!-- login block --}}
             <div class="col-xs-4">
                 {{!-- replace stephanie with {{name}} --}}
-                <h3 id="welcome">hi Stephanie</h3>
+                {{!-- <h3 id="welcome">hi Stephanie</h3> --}}
+
+
+                {{#if logged_in}}
+                <h5 class="welcome">{{email}}</h5>
+                <p class="welcome"><a href="/users/sign-out">Sign Out</a></p>
+                {{/if}}
+
+
             </div>
 
             <div class="col-xs-2">

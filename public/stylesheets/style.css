@@ -86,6 +86,14 @@
 /*end index.handlebars styling*/
 
 /*----------------------------*/
+
+/*start styling for survey*/
+#compatsurvey {
+	margin-top: 60px;
+}
+/*end styling for survey*/
+
+
 /*----------------------------*/
 
 /*start results.handlebars styling*/
@@ -101,10 +109,12 @@
 	line-height: 37px;
 }
 
-#welcome {
-	line-height: 45px;
+.welcome {
+	line-height: 30px;
 	color: white;
 	text-align: right;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
 }
 
 #userpic {
@@ -114,7 +124,7 @@
 }
 
 #conbody {
-	margin-top: 100px;
+	margin-top: 60px;
 }
 
 .header1text {

@@ -1,3 +1,43 @@
+{{!-- header bar --}}
+<nav class="navbar navbar-default navbar-fixed-top">
+<div id="minijumbohead">
+    {{!-- container for spacing --}}
+    <div class="container">
+        {{!-- everything in the header is a row --}}
+        <div class="row">
+
+            {{!-- logo block--}}
+            <div class="col-xs-5">
+                <h1>room<span class="bracket">[</span>ease<span class="bracket">]</span></h1>
+            </div>
+
+            {{!-- blank column for nicer headerspacing--}}
+            <div class="col-xs-1">
+            </div>
+
+            {{!-- login block --}}
+            <div class="col-xs-4">
+                {{!-- replace stephanie with {{name}} --}}
+                {{!-- <h3 id="welcome">hi Stephanie</h3> --}}
+
+
+                {{#if logged_in}}
+                <h5 class="welcome">{{email}}</h5>
+                <p class="welcome"><a href="/users/sign-out">Sign Out</a></p>
+                {{/if}}
+
+
+            </div>
+
+            <div class="col-xs-2">
+                {{!-- current user pic goes here --}}
+                <img id="userpic" src="http://coolwildlife.com/wp-content/uploads/galleries/post-3004/Fox%20Picture%20003.jpg">
+            </div>    
+        </div>
+    </div>
+</div>
+</nav>
+
 <div class="container">
 
 {{!-- UPDATE "CREATE" AND "POST" NOW THAT IT'S NOT A FORM --}}
