@@ -1,5 +1,5 @@
 {
-  "name": "dom-traversers",
+  "name": "express-example",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -16,21 +16,11 @@
     "method-override": "^2.3.5",
     "morgan": "~1.6.1",
     "mysql": "^2.11.1",
-    "sequelize": "^3.24.3",
+    "sequelize": "^3.3.2",
     "sequelize-cli": "^1.7.1",
     "serve-favicon": "~2.3.0"
   },
-  "description": "This is a SuperMaster",
-  "main": "app.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/toddcf/dom-traversers.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/toddcf/dom-traversers/issues"
-  },
-  "homepage": "https://github.com/toddcf/dom-traversers#readme"
+  "devDependencies": {
+    "mysql": "^2.11.1"
+  }
 }
