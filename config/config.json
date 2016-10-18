@@ -2,7 +2,7 @@
   "development": {
     "host": "localhost",
     "username": "root",
-    "password": "guagua",
+    "password": "vanilla.123",
     "database": "dom_test",
     "dialect": "mysql"
 
