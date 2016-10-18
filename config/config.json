@@ -1,10 +1,11 @@
 {
   "development": {
+    "host": "localhost",
     "username": "root",
-    "password": "Iwsi2017!",
-    "database": "matchme_db",
-    "host": "127.0.0.1",
+    "password": "drummrboy1",
+    "database": "dom_test",
     "dialect": "mysql"
+
   },
   "test": {
     "username": "root",

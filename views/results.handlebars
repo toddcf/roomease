@@ -1,0 +1,38 @@
+<h1>Your Matches!</h1>
+
+{{!-- <ul>
+  {{#each matchtables}}
+    {{#unless logged_in}}
+      <li>
+        {{this.matchname}} - owned by {{this.User.email}}
+
+        <form action="cats/update/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="sleepy" value="true">
+          <button type="submit">SLEEP TIME!</button>
+        </form>
+
+        {{> cats/delete-cat}}
+      </li>
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Cats that are sleepy!</h2>
+
+<ul>
+  {{#each cats}}
+    {{#if this.sleepy}}
+      <li>
+        {{this.name}} - owned by {{this.User.email}}
+
+        <form action="cats/update/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="sleepy" value="false">
+          <button type="submit">WAKE UP!</button>
+        </form>
+
+        {{> cats/delete-cat}}
+      </li>
+    {{/if}}
+  {{/each}}
+</ul>
+ --}}
