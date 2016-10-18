@@ -4,6 +4,28 @@ module.exports = function(sequelize, DataTypes) {
   var Response = sequelize.define("Response", {
     smoke: { type: DataTypes.BOOLEAN, defaultValue: false },
     roommateSmoke: DataTypes.STRING,
+
+    schedule: { type: DataTypes.BOOLEAN, defaultValue: false },
+    roommateschedule: DataTypes.STRING,
+
+    personality: { type: DataTypes.BOOLEAN, defaultValue: false },
+    roommatepersonality: DataTypes.STRING,
+        
+    parties: { type: DataTypes.BOOLEAN, defaultValue: false },
+    roommateparties: DataTypes.STRING,
+        
+    friends: { type: DataTypes.BOOLEAN, defaultValue: false },
+    roommatefriends: DataTypes.STRING,
+        
+    pets: { type: DataTypes.BOOLEAN, defaultValue: false },
+    roommatepets: DataTypes.STRING,
+        
+    cleanliness: { type: DataTypes.BOOLEAN, defaultValue: false },
+    roommatecleanliness: DataTypes.STRING,
+        
+    music: { type: DataTypes.BOOLEAN, defaultValue: false },
+    roommatemusic: DataTypes.STRING,
+
   }, {
     // don't add the timestamp attributes (updatedAt, createdAt)
       //timestamps: false,

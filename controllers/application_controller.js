@@ -6,4 +6,8 @@ router.get('/', function(req, res) {
   res.redirect('/index');
 });
 
+// router.get('/', function(req, res) {
+//   res.redirect('/stephindex');
+// });
+
 module.exports = router;
