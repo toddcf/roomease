@@ -1,26 +1,27 @@
-<!--
-Here is the main HTML where handlebars will render to
- -->
-
 <!DOCTYPE html>
 <html lang="en">
+{{!-- <link rel="stylesheet" type="text/css" href="/stylesheets/style.css"> --}}
+<<<<<<< HEAD
+<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
 	<head>
-		<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
-		<title>Roommate Matcher!</title>
 	</head>
 	<body>
-		<p>
-			{{#unless logged_in}}
-				<a href="/users/sign-in">Sign In</a>
-				<a href="/users/new">Sign Up</a>
-			{{/unless}}
-
-			{{#if logged_in}}
-				Welcome {{email}}! <br>
-				You are user {{user_id}}.<br>
-				<a href="/users/sign-out">Sign Out</a>
-			{{/if}}
-		</p>
 		{{{ body }}}
+=======
+{{!-- <link rel="stylesheet" href="/stylesheets/style.css" type="text/css" /> --}}
+<link rel="shortcut icon" href="">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<head>
+	</head>
+	<body>
+	<div class="container">
+	
+		{{{ body }}}
+	</div>
+>>>>>>> 99f7c65e5a988de40e9c417798e040b317e1b932
 	</body>
-</HTML>
+</html>
