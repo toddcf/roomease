@@ -1,35 +1,141 @@
+
+{{!-- header bar --}}
+<nav class="navbar navbar-default navbar-fixed-top">
+<div id="minijumbohead">
+    {{!-- container for spacing --}}
+    <div class="container">
+        {{!-- everything in the header is a row --}}
+        <div class="row">
+
+            {{!-- logo block--}}
+            <div class="col-xs-5">
+                <h1>room<span class="bracket">[</span>ease<span class="bracket">]</span></h1>
+            </div>
+
+            {{!-- blank column for nicer headerspacing--}}
+            <div class="col-xs-1">
+            </div>
+
+            {{!-- login block --}}
+            <div class="col-xs-4">
+                {{!-- replace stephanie with {{name}} --}}
+                <h3 id="welcome">hi Stephanie</h3>
+            </div>
+
+            <div class="col-xs-2">
+                {{!-- current user pic goes here --}}
+                <img id="userpic" src="http://coolwildlife.com/wp-content/uploads/galleries/post-3004/Fox%20Picture%20003.jpg">
+            </div>    
+        </div>
+    </div>
+</div>
+</nav>
+
+
+{{!-- page contents in a container--}}
+<div class="container" id="conbody">
+<h1 class="header1text">Results</h1>
+
+    {{!-- dummy data sample results block--}}
+    {{!-- will want to use handlebars each to get top 10 or so results --}}
+    <div class="results">
+
+    <div class="row match">
+        {{!-- div stores compatibility rating --}}
+        <div class="compatrate">
+            <h3>100%</h3>
+        </div>
+        
+        {{!-- div holds profile picture --}}
+        <div class="col-xs-3">
+            <img class="profpic" src="http://coolwildlife.com/wp-content/uploads/galleries/post-3004/Fox%20Picture%20003.jpg">
+        </div>
+
+        {{!-- div for main info: name, bio, whatever other stuff we want to show --}}
+        <div class="col-xs-9">
+            <h4>Name: Stephanie Orpilla</h4>
+            <p>Bio: lorem ipsum abjadklfsj asjdfklasdj fsadfjkl sdfjklsd sjdfklsdfjsdkl ewrj sdfj werjkl sdfjklsa asdjfk</p>
+        </div>
+
+    </div>
+
+    <div class="row match">
+        {{!-- div stores compatibility rating --}}
+        <div class="compatrate">
+            <h3>90%</h3>
+        </div>
+        
+        {{!-- div holds profile picture --}}
+        <div class="col-xs-3">
+            <img class="profpic" src="https://www.sitebuilderreport.com/assets/facebook-stock-up-08c6c9a855df26a3b13a34ac62bb75cc.jpg">
+        </div>
+
+        {{!-- div for main info: name, bio, whatever other stuff we want to show --}}
+        <div class="col-xs-9">
+            <h4>Name: Stephanie Orpilla</h4>
+            <p>Bio: lorem ipsum abjadklfsj asjdfklasdj fsadfjkl sdfjklsd sjdfklsdfjsdkl ewrj sdfj werjkl sdfjklsa asdjfk</p>
+        </div>
+
+    </div>
+
+    <div class="row match">
+        <div class="compatrate">
+            <h3>80%</h3>
+        </div>
+
+        <div class="col-xs-3">
+            <img class="profpic" src="http://3.bp.blogspot.com/-Hu9NZ79ry7g/TzeRi8Q7V7I/AAAAAAAAQvo/p2YQD5hs1s8/s1600/free+stock+photos+(10).jpg">
+        </div>
+
+        <div class="col-xs-9">
+            <h4>Stephanie Orpilla</h4>
+            <p>Bio: lorem ipsum abjadklfsj asjdfklasdj fsadfjkl sdfjklsd sjdfklsdfjsdkl ewrj sdfj werjkl sdfjklsa asdjfk</p>
+        </div>
+    </div>
+
+    <div class="row match">
+        <div class="compatrate">
+            <h3>70%</h3>
+        </div>
+
+        <div class="col-xs-3">
+            <img class="profpic" src="http://orig02.deviantart.net/e5ff/f/2007/279/f/1/bones___1_by_mjranum_stock.jpg">
+        </div>
+
+        <div class="col-xs-9">
+            <h4>Stephanie Orpilla</h4>
+            <p>Bio: lorem ipsum abjadklfsj asjdfklasdj fsadfjkl sdfjklsd sjdfklsdfjsdkl ewrj sdfj werjkl sdfjklsa asdjfk</p>
+        </div>
+    </div>
+</div>
+
 <h1>Your Matches!!!!!!</h1>
+
 
 {{!-- <ul>
   {{#each matchtables}}
     {{#unless logged_in}}
       <li>
         {{this.matchname}} - owned by {{this.User.email}}
-
         <form action="cats/update/{{this.id}}?_method=PUT" method="POST">
           <input type="hidden" name="sleepy" value="true">
           <button type="submit">SLEEP TIME!</button>
         </form>
-
         {{> cats/delete-cat}}
       </li>
     {{/unless}}
   {{/each}}
 </ul>
-
 <h2>Cats that are sleepy!</h2>
-
 <ul>
   {{#each cats}}
     {{#if this.sleepy}}
       <li>
         {{this.name}} - owned by {{this.User.email}}
-
         <form action="cats/update/{{this.id}}?_method=PUT" method="POST">
           <input type="hidden" name="sleepy" value="false">
           <button type="submit">WAKE UP!</button>
         </form>
-
         {{> cats/delete-cat}}
       </li>
     {{/if}}
