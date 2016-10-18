@@ -1,82 +1,169 @@
-#jumbohead{
+/*index.handlebars styling*/
+
+	#jumbohead{
+		background-color: #072f26;
+		height: 15%;
+		border-bottom: solid #8dc8b4 10px;
+	}
+	#jumbohead, #minijumbohead h1 {
+		color: white;
+	}
+
+	.bracket {
+		color: #8dc8b4;
+		padding: 2px;
+	}
+
+	.formlabels {
+		color: #8dc8b4;
+	}
+
+	#bottomgroup {
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+	}
+
+	#signInButton, #signUpButton {
+		background-color: #4b907b;
+		border: #4b907b;
+		font-weight: bold;
+		color: white;
+		text-align: center;
+	}
+
+	#signInButton:hover {
+		background-color: #c7ddda;
+		border: #c7ddda;
+		font-weight: bold;
+		color: #072f26;
+		text-align: center;
+	}
+
+	#signUpButton:hover {
+		background-color: #072f26;
+		border: #072f26;
+		font-weight: bold;
+		color: white;
+		text-align: center;
+	}
+
+	form label {
+		color: white;
+	}
+
+	h3 {
+		text-align: left;
+	}
+
+	.reIcon {
+		height: 100%%;
+		width: 100%;
+	}
+
+	.aboutRow {
+		padding-top: 25px;
+	}
+
+	.description {
+		display: inline;
+		margin: 0 auto;
+	}
+
+	#firstName {
+		width: 49%;
+		float: left;
+	}
+
+	#lastName {
+		width: 49%;
+		float: right;
+	}
+
+	#emailAddress {
+		clear: both;
+	}
+
+/*end index.handlebars styling*/
+
+/*----------------------------*/
+/*----------------------------*/
+
+/*start results.handlebars styling*/
+
+#minijumbohead {
 	background-color: #072f26;
-	height: 15%;
 	border-bottom: solid #8dc8b4 10px;
+	height: 90px;
+	position:relative;
 }
-#jumbohead h1 {
+
+#minijumbohead h1 {
+	line-height: 37px;
+}
+
+#welcome {
+	line-height: 45px;
 	color: white;
+	text-align: right;
 }
 
-.bracket {
-	color: #8dc8b4;
-	padding: 2px;
+#userpic {
+	height: 80px;
+	position: absolute;
+    margin:auto;
 }
 
-.formlabels {
-	color: #8dc8b4;
+#conbody {
+	margin-top: 100px;
 }
 
-#bottomgroup {
-	padding-bottom: 0px;
-	margin-bottom: 0px;
-}
-
-#signInButton, #signUpButton {
-	background-color: #4b907b;
-	border: #4b907b;
-	font-weight: bold;
-	color: white;
-	text-align: center;
-}
-
-#signInButton:hover {
-	background-color: #c7ddda;
-	border: #c7ddda;
-	font-weight: bold;
+.header1text {
 	color: #072f26;
-	text-align: center;
+	padding-bottom: 10px;
 }
 
-#signUpButton:hover {
-	background-color: #072f26;
-	border: #072f26;
-	font-weight: bold;
-	color: white;
-	text-align: center;
-}
-
-form label {
-	color: white;
-}
-
-h3 {
-	text-align: left;
-}
-
-.reIcon {
-	height: 100%%;
+.profpic {
 	width: 100%;
+	line-height: 2px;
 }
 
-.aboutRow {
-	padding-top: 25px;
+.row.match {
+	padding-bottom: 10px;
+	padding-top: 10px;
+	border: #8dc8b4 2px solid;
+	margin-bottom: 20px;
+	position: relative;
+	height: 25%;
+	background-color: #c7ddda;
 }
 
-.description {
-	display: inline;
+.row.match:hover {
+	background-color: #c7ddda;
+	border: solid 5px #1d4f44;
+}
+
+.compatrate {
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	padding: 10px;
+	margin: 2px;
+	background-color: #1d4f44;
+	color: #c7ddda;
+	z-index: 2;
+	justify-content: center;
+	align-items: center;
+}
+
+.compatrate h3 {
 	margin: 0 auto;
 }
+/*end results.handlebars styling*/
 
-#firstName {
-	width: 49%;
-	float: left;
-}
+/*----------------------------*/
+/*----------------------------*/
 
-#lastName {
-	width: 49%;
-	float: right;
-}
 
-#emailAddress {
-	clear: both;
-}
+
+
+
