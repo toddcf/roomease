@@ -200,10 +200,10 @@ module.exports = function(userID){
 
     // console.log(matchArray);
 
-    console.log(currentUser.name+"'s top matches:");
-    for (i=0; i<matchArray.length; i++){
-        console.log((i+1)+". "+matchArray[i].friendData.name+": "+matchArray[i].compat+"% compatible");
-    }
+    // console.log(currentUser.name+"'s top matches:");
+    // for (i=0; i<matchArray.length; i++){
+    //     console.log((i+1)+". "+matchArray[i].friendData.name+": "+matchArray[i].compat+"% compatible");
+    // }
 
     return matchArray;
 }
