@@ -1,6 +1,7 @@
 var models  = require('../models');
 var express = require('express');
 var router  = express.Router();
+var matchFunc = require('../matchingAlgorithm.js');
 
 
 router.get('/', function(req, res) {
@@ -25,6 +26,8 @@ router.get('/', function(req, res) {
       responses: responses
     });
   });
+
+  matchFunc('colinm');
 });
 
 // ???
