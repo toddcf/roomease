@@ -3,7 +3,7 @@
     "host": "localhost",
     "username": "root",
     "password": "vanilla.123",
-    "database": "dom_test",
+    "database": "guagua",
     "dialect": "mysql"
 
   },
