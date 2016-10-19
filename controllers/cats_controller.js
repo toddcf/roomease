@@ -26,12 +26,14 @@ router.get('/', function(req, res) {
       responses: responses
     });
   });
-
-  matchFunc('colinm');
 });
 
 // ???
 router.get('/results',function(req,res){
+
+  var matchdata = matchFunc('colinm');
+  console.log(matchdata);
+
   models.Response.findAll({
     include: [ models.User ]
   })
@@ -40,11 +42,13 @@ router.get('/results',function(req,res){
     // grab the user info from our req.
     // How is it in our req?
     // This info gets saved to req via the users_controller.js file.
+    
     res.render('results', {
       user_id: req.session.user_id,
       email: req.session.user_email,
       logged_in: req.session.logged_in,
-      responses: responses
+      responses: responses,
+      matchdata: matchdata
     });
   });
 })

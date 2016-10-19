@@ -2,6 +2,7 @@ var friends = [
 {
 	userEmail: "colinm",
 	name: "Colin",
+    photoLink: "http://coolwildlife.com/wp-content/uploads/galleries/post-3004/Fox%20Picture%20003.jpg",
 	scores: [
 		[true,"same"],
 		[true,"same"],
@@ -11,6 +12,7 @@ var friends = [
 {
 	userEmail: "michellel",
 	name: "Michelle",
+    photoLink: "https://www.sitebuilderreport.com/assets/facebook-stock-up-08c6c9a855df26a3b13a34ac62bb75cc.jpg",
 	scores: [
 		[true,"dgaf"],
 		[true,"dgaf"],
@@ -20,6 +22,7 @@ var friends = [
 {
 	userEmail: "stepho",
 	name: "Stephanie",
+    photoLink: "http://3.bp.blogspot.com/-Hu9NZ79ry7g/TzeRi8Q7V7I/AAAAAAAAQvo/p2YQD5hs1s8/s1600/free+stock+photos+(10).jpg",
 	scores: [
 		[true,"same"],
 		[false,"same"],
@@ -29,6 +32,7 @@ var friends = [
 {
 	userEmail: "omarp",
 	name: "Omar",
+    photoLink: "http://orig02.deviantart.net/e5ff/f/2007/279/f/1/bones___1_by_mjranum_stock.jpg",
 	scores: [
 		[true,"opposite"],
 		[false,"dgaf"],
@@ -38,6 +42,7 @@ var friends = [
 {
 	userEmail: "jeffm",
 	name: "Jeff",
+    photoLink: "http://coolwildlife.com/wp-content/uploads/galleries/post-3004/Fox%20Picture%20003.jpg",
 	scores: [
 		[false,"same"],
 		[false,"opposite"],
@@ -200,10 +205,10 @@ module.exports = function(userID){
 
     // console.log(matchArray);
 
-    console.log(currentUser.name+"'s top matches:");
-    for (i=0; i<matchArray.length; i++){
-        console.log((i+1)+". "+matchArray[i].friendData.name+": "+matchArray[i].compat+"% compatible");
-    }
+    // console.log(currentUser.name+"'s top matches:");
+    // for (i=0; i<matchArray.length; i++){
+    //     console.log((i+1)+". "+matchArray[i].friendData.name+": "+matchArray[i].compat+"% compatible");
+    // }
 
     return matchArray;
 }
