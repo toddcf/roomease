@@ -126,7 +126,7 @@ router.put('/update/:id', function(req,res) {
     music_user: req.body.music_user,
     music_roommate: req.body.music_roommate,
 
-    imageicon_user: req.body.imageicon_user,
+    imageicon_user: req.body.imageicon_user
   },
   {
     where: { id : req.params.id }
