@@ -516,60 +516,6 @@ router.get('/results',function(req,res){
     // How is it in our req?
     // This info gets saved to req via the users_controller.js file.
 
-
-
-    // var userArr = [
-    //   {
-    //     userEmail: "colinm",
-    //     name: "Colin",
-    //     photoLink: "http://coolwildlife.com/wp-content/uploads/galleries/post-3004/Fox%20Picture%20003.jpg",
-    //     scores: [
-    //       [true,"yes"],
-    //       [true,"yes"],
-    //       [true,"no"]
-    //     ]
-    //   },
-    //   {
-    //     userEmail: "michellel",
-    //     name: "Michelle",
-    //     photoLink: "https://www.sitebuilderreport.com/assets/facebook-stock-up-08c6c9a855df26a3b13a34ac62bb75cc.jpg",
-    //     scores: [
-    //       [true,"dc"],
-    //       [true,"dc"],
-    //       [true,"yes"]
-    //     ]
-    //   },
-    //   {
-    //     userEmail: "stepho",
-    //     name: "Stephanie",
-    //     photoLink: "http://3.bp.blogspot.com/-Hu9NZ79ry7g/TzeRi8Q7V7I/AAAAAAAAQvo/p2YQD5hs1s8/s1600/free+stock+photos+(10).jpg",
-    //     scores: [
-    //       [true,"no"],
-    //       [false,"no"],
-    //       [false,"no"]
-    //     ]
-    //   },
-    //   {
-    //     userEmail: "omarp",
-    //     name: "Omar",
-    //     photoLink: "http://orig02.deviantart.net/e5ff/f/2007/279/f/1/bones___1_by_mjranum_stock.jpg",
-    //     scores: [
-    //       [true,"yes"],
-    //       [false,"dc"],
-    //       [false,"no"]
-    //     ]
-    //   },
-    //   {
-    //     userEmail: "jeffm",
-    //     name: "Jeff",
-    //     photoLink: "http://coolwildlife.com/wp-content/uploads/galleries/post-3004/Fox%20Picture%20003.jpg",
-    //     scores: [
-    //       [false,"no"],
-    //       [false,"no"],
-    //       [false,"dc"]
-    //     ]
-    //   }];
-
       var userArr = [];
 
       models.User.findAll().then(function(usertable){
@@ -579,7 +525,7 @@ router.get('/results',function(req,res){
             user_id: responses[i].dataValues.user_id,
             email: usertable[i].dataValues.email,
             name: "Name goes here",
-            photoLink: "http://coolwildlife.com/wp-content/uploads/galleries/post-3004/Fox%20Picture%20003.jpg",
+            photoLink: responses[i].dataValues.imageicon_user,
             scores: [
               [responses[i].dataValues.smoke_user, responses[i].dataValues.smoke_roommate],
               [responses[i].dataValues.schedule_user, responses[i].dataValues.schedule_roommate],
@@ -593,26 +539,7 @@ router.get('/results',function(req,res){
           });
         }  
 
-
-
-
-
-
-
-
-
-        // DELETE THIS WHEN BACKEND FINISHES
-        var matchdata = matchFunc(2, userArr);
-
-        // USE THIS CODE INSTEAD...
-        // var matchdata = matchFunc(req.session.user_id, userArr);
-
-
-
-
-
-
-
+        var matchdata = matchFunc(req.session.user_id, userArr);
 
         res.render('results', {
           user_id: req.session.user_id,
@@ -623,7 +550,6 @@ router.get('/results',function(req,res){
         });
 
       });
-
 
   });
 })
