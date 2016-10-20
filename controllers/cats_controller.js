@@ -31,8 +31,6 @@ router.get('/', function(req, res) {
 // ???
 router.get('/results',function(req,res){
 
-  var matchdata = matchFunc('colinm');
-  console.log(matchdata);
 
   models.Response.findAll({
     include: [ models.User ]
@@ -42,14 +40,55 @@ router.get('/results',function(req,res){
     // grab the user info from our req.
     // How is it in our req?
     // This info gets saved to req via the users_controller.js file.
-    
-    res.render('results', {
-      user_id: req.session.user_id,
-      email: req.session.user_email,
-      logged_in: req.session.logged_in,
-      responses: responses,
-      matchdata: matchdata
-    });
+
+      var userArr = [];
+
+      models.User.findAll().then(function(usertable){
+        for(var i=0;i<usertable.length;i++){
+
+          userArr.push({
+            user_id: responses[i].dataValues.user_id,
+            email: usertable[i].dataValues.email,
+            name: "Name goes here",
+            photoLink: responses[i].dataValues.imageicon_user,
+            scores: [
+              [responses[i].dataValues.smoke_user, responses[i].dataValues.smoke_roommate],
+              [responses[i].dataValues.schedule_user, responses[i].dataValues.schedule_roommate],
+              [responses[i].dataValues.personality_user, responses[i].dataValues.personality_roommate],
+              [responses[i].dataValues.parties_user, responses[i].dataValues.parties_roommate],
+              [responses[i].dataValues.friends_user, responses[i].dataValues.friends_roommate],
+              [responses[i].dataValues.pets_user, responses[i].dataValues.pets_roommate],
+              [responses[i].dataValues.cleanliness_user, responses[i].dataValues.cleanliness_roommate],
+              [responses[i].dataValues.music_user, responses[i].dataValues.music_roommate]
+            ]
+          });
+        }  
+
+        // If you are the first person to sign up, create dummy data for the results table
+        if(responses.length == 1){
+          var matchdata = [{
+            "friendData": [{
+              user_id: null,
+              email: "You are the first person to sign up, so no matches!",
+              name: "Name goes here",
+              photoLink: "https://www.sitebuilderreport.com/assets/facebook-stock-up-08c6c9a855df26a3b13a34ac62bb75cc.jpg"
+            }], "compat": "None yet "}];
+        }
+        // Otherwise, find matches
+        else{
+          var matchdata = matchFunc(req.session.user_id, userArr);
+        }
+
+        res.render('results', {
+          user_id: req.session.user_id,
+          email: req.session.user_email,
+          logged_in: req.session.logged_in,
+          responses: responses,
+          matchdata: matchdata
+        });
+
+      });
+
   });
 })
 // ???
@@ -90,7 +129,7 @@ router.post('/create', function (req, res) {
   })
   // connect the .create to this .then
   .then(function() {
-    res.redirect('/');
+    res.redirect('/index/results');
   });
 });
 
