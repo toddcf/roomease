@@ -72,12 +72,13 @@ router.get('/results',function(req,res){
         // If you are the first person to sign up, create dummy data for the results table
         if(responses.length == 1){
           var matchdata = [{
-            "friendData": [{
+            "friendData": {
               user_id: 0,
               email: "You are the first person to sign up, so no matches!",
               name: "Name goes here",
               photoLink: "https://www.sitebuilderreport.com/assets/facebook-stock-up-08c6c9a855df26a3b13a34ac62bb75cc.jpg"
-            }], "compat": "None yet "}];
+            },
+            "compat": "None yet "}];
         }
         // Otherwise, find matches
         else{
