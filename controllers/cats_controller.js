@@ -41,10 +41,15 @@ router.get('/results',function(req,res){
     // How is it in our req?
     // This info gets saved to req via the users_controller.js file.
 
+      // for(var i=0;i<responses.length;i++){
+      //   console.log("id "+i);
+      //   console.log(responses[i].getDataValue('id'));
+      // }
+
       var userArr = [];
 
       models.User.findAll().then(function(usertable){
-        for(var i=0;i<usertable.length;i++){
+        for(var i=0;i<responses.length;i++){
 
           userArr.push({
             user_id: responses[i].dataValues.user_id,
@@ -67,12 +72,13 @@ router.get('/results',function(req,res){
         // If you are the first person to sign up, create dummy data for the results table
         if(responses.length == 1){
           var matchdata = [{
-            "friendData": [{
-              user_id: null,
+            "friendData": {
+              user_id: 0,
               email: "You are the first person to sign up, so no matches!",
               name: "Name goes here",
               photoLink: "https://www.sitebuilderreport.com/assets/facebook-stock-up-08c6c9a855df26a3b13a34ac62bb75cc.jpg"
-            }], "compat": "None yet "}];
+            },
+            "compat": "None yet "}];
         }
         // Otherwise, find matches
         else{
