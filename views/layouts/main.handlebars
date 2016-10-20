@@ -13,18 +13,6 @@ Here is the main HTML where handlebars will render to
 		<title>Roommate Matcher!</title>
 	</head>
 	<body>
-		<p>
-			{{#unless logged_in}}
-				<a href="/users/sign-in">Sign In</a>
-				<a href="/users/new">Sign Up</a>
-			{{/unless}}
-
-			{{#if logged_in}}
-				Welcome {{email}}! <br>
-				You are user {{user_id}}.<br>
-				<a href="/users/sign-out">Sign Out</a>
-			{{/if}}
-		</p>
 		{{{ body }}}
 	</body>
 </HTML>
