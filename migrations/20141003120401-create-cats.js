@@ -12,6 +12,9 @@ module.exports = {
         user_id: {
           type: Sequelize.INTEGER
         },
+
+        imageicon_user: {type: Sequelize.STRING, default:"https://u.o0bc.com/avatars/no-user-image.gif"},
+
         smoke_user: {type: Sequelize.BOOLEAN, default: false},
         smoke_roommate: Sequelize.STRING,
 
