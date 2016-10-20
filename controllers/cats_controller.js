@@ -516,10 +516,6 @@ router.get('/results',function(req,res){
     // How is it in our req?
     // This info gets saved to req via the users_controller.js file.
 
-    // console.log("req.session.user_id:");
-    // console.log(req.session.user_id);
-    // console.log("responses:");
-    // console.log(responses);
 
 
     // var userArr = [
@@ -576,17 +572,8 @@ router.get('/results',function(req,res){
 
       var userArr = [];
 
-
-
-
       models.User.findAll().then(function(usertable){
         for(var i=0;i<usertable.length;i++){
-
-          // console.log("responses[i].dataValues.smoke_user:");
-          // console.log(responses[i].dataValues.smoke_user),
-          // console.log("responses:");
-          // console.log(responses);
-          // console.log(i);
 
           userArr.push({
             user_id: responses[i].dataValues.user_id,
@@ -606,17 +593,27 @@ router.get('/results',function(req,res){
           });
         }  
 
-        // console.log("userArr[0].scores:");
-        // console.log(userArr[0].scores);
-        // console.log('req.session.user_id:');
-        // console.log(req.session.user_id);
 
+
+
+
+
+
+
+
+        // DELETE THIS WHEN BACKEND FINISHES
         var matchdata = matchFunc(2, userArr);
 
+        // USE THIS CODE INSTEAD...
+        // var matchdata = matchFunc(req.session.user_id, userArr);
 
-      // console.log("matchdata:");
-      // console.log(matchdata);
-      
+
+
+
+
+
+
+
         res.render('results', {
           user_id: req.session.user_id,
           email: req.session.user_email,
