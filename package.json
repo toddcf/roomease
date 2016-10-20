@@ -22,5 +22,18 @@
   },
   "devDependencies": {
     "mysql": "^2.11.1"
-  }
+  },
+  "description": "This repository demonstrates the usage of sequelize within an express application.\r The implemented logic is a simple task tracking tool.",
+  "main": "matchingAlgorithm.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toddcf/dom-traversers.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/toddcf/dom-traversers/issues"
+  },
+  "homepage": "https://github.com/toddcf/dom-traversers#readme"
 }
