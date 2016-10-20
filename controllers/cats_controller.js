@@ -60,8 +60,30 @@ router.post('/create', function (req, res) {
   // use the Cat model to create a cat based on what's
   // passed in req.body (name, sleepy, user_id)
   models.Response.create({
-    smoke: req.body.smoke,
-    roommateSmoke: req.body.roommateSmoke,
+    smoke_user: req.body.smoke_user,
+    smoke_roommate: req.body.smoke_roommate,
+
+    schedule_user: req.body.schedule_user,
+    schedule_roommate: req.body.schedule_roommate,
+
+    personality_user: req.body.personality_user,
+    personality_roommate: req.body.personality_roommate,
+
+    parties_user:req.body.parties_user,
+    parties_roommate:req.body.parties_roommate,
+
+    friends_user: req.body.friends_user,
+    friends_roommate: req.body.friends_roommate,
+
+    pets_user: req.body.pets_user,
+    pets_roommate: req.body.pets_roommate,
+
+    cleanliness_user: req.body.cleanliness_user,
+    cleanliness_roommate: req.body.cleanliness_roommate,
+
+    music_user: req.body.music_user,
+    music_roommate: req.body.music_roommate,
+
     user_id: req.session.user_id
   })
   // connect the .create to this .then
@@ -78,7 +100,29 @@ router.put('/update/:id', function(req,res) {
   // and the id of the cat (as passed in the url)
   models.Response.update(
   {
-    smoke: req.body.smoke
+    smoke_user: req.body.smoke_user,
+    smoke_roommate: req.body.smoke_roommate,
+
+    schedule_user: req.body.schedule_user,
+    schedule_roommate: req.body.schedule_roommate,
+
+    personality_user: req.body.personality_user,
+    personality_roommate: req.body.personality_roommate,
+
+    parties_user:req.body.parties_user,
+    parties_roommate:req.body.parties_roommate,
+
+    friends_user: req.body.friends_user,
+    friends_roommate: req.body.friends_roommate,
+
+    pets_user: req.body.pets_user,
+    pets_roommate: req.body.pets_roommate,
+
+    cleanliness_user: req.body.cleanliness_user,
+    cleanliness_roommate: req.body.cleanliness_roommate,
+
+    music_user: req.body.music_user,
+    music_roommate: req.body.music_roommate
   },
   {
     where: { id : req.params.id }

@@ -2,29 +2,29 @@
 
 module.exports = function(sequelize, DataTypes) {
   var Response = sequelize.define("Response", {
-    smoke: { type: DataTypes.BOOLEAN, defaultValue: false },
-    roommateSmoke: DataTypes.STRING,
+    smoke_user: { type: DataTypes.BOOLEAN, defaultValue: false },
+    smoke_roommate: DataTypes.STRING,
 
-    schedule: { type: DataTypes.BOOLEAN, defaultValue: false },
-    roommateschedule: DataTypes.STRING,
+    schedule_user: { type: DataTypes.BOOLEAN, defaultValue: false },
+    schedule_roommate: DataTypes.STRING,
 
-    personality: { type: DataTypes.BOOLEAN, defaultValue: false },
-    roommatepersonality: DataTypes.STRING,
+    personality_user: { type: DataTypes.BOOLEAN, defaultValue: false },
+    personality_roommate: DataTypes.STRING,
         
-    parties: { type: DataTypes.BOOLEAN, defaultValue: false },
-    roommateparties: DataTypes.STRING,
+    parties_user: { type: DataTypes.BOOLEAN, defaultValue: false },
+    parties_roommate: DataTypes.STRING,
         
-    friends: { type: DataTypes.BOOLEAN, defaultValue: false },
-    roommatefriends: DataTypes.STRING,
+    friends_user: { type: DataTypes.BOOLEAN, defaultValue: false },
+    friends_roommate: DataTypes.STRING,
         
-    pets: { type: DataTypes.BOOLEAN, defaultValue: false },
-    roommatepets: DataTypes.STRING,
+    pets_user: { type: DataTypes.BOOLEAN, defaultValue: false },
+    pets_roommate: DataTypes.STRING,
         
-    cleanliness: { type: DataTypes.BOOLEAN, defaultValue: false },
-    roommatecleanliness: DataTypes.STRING,
+    cleanliness_user: { type: DataTypes.BOOLEAN, defaultValue: false },
+    cleanliness_roommate: DataTypes.STRING,
         
-    music: { type: DataTypes.BOOLEAN, defaultValue: false },
-    roommatemusic: DataTypes.STRING,
+    music_user: { type: DataTypes.BOOLEAN, defaultValue: false },
+    music_roommate: DataTypes.STRING,
 
   }, {
     // don't add the timestamp attributes (updatedAt, createdAt)

@@ -12,29 +12,29 @@ module.exports = {
         user_id: {
           type: Sequelize.INTEGER
         },
-        smoke: {type: Sequelize.BOOLEAN, default: false},
-        roommateSmoke: Sequelize.STRING,
+        smoke_user: {type: Sequelize.BOOLEAN, default: false},
+        smoke_roommate: Sequelize.STRING,
 
-        schedule: {type: Sequelize.BOOLEAN, default: false},
-        roommateschedule: Sequelize.STRING,
+        schedule_user: {type: Sequelize.BOOLEAN, default: false},
+        schedule_roommate: Sequelize.STRING,
 
-        personality: {type: Sequelize.BOOLEAN, default: false},
-        roommatepersonality: Sequelize.STRING,
+        personality_user: {type: Sequelize.BOOLEAN, default: false},
+        personality_roommate: Sequelize.STRING,
         
-        parties: {type: Sequelize.BOOLEAN, default: false},
-        roommateparties: Sequelize.STRING,
+        parties_user: {type: Sequelize.BOOLEAN, default: false},
+        parties_roommate: Sequelize.STRING,
         
-        friends: {type: Sequelize.BOOLEAN, default: false},
-        roommatefriends: Sequelize.STRING,
+        friends_user: {type: Sequelize.BOOLEAN, default: false},
+        friends_roommate: Sequelize.STRING,
         
-        pets: {type: Sequelize.BOOLEAN, default: false},
-        roommatepets: Sequelize.STRING,
+        pets_user: {type: Sequelize.BOOLEAN, default: false},
+        pets_roommate: Sequelize.STRING,
         
-        cleanliness: {type: Sequelize.BOOLEAN, default: false},
-        roommatecleanliness: Sequelize.STRING,
+        cleanliness_user: {type: Sequelize.BOOLEAN, default: false},
+        cleanliness_roommate: Sequelize.STRING,
         
-        music: {type: Sequelize.BOOLEAN, default: false},
-        roommatemusic: Sequelize.STRING,
+        music_user: {type: Sequelize.BOOLEAN, default: false},
+        musi_roommatec: Sequelize.STRING,
 
         created_at: Sequelize.DATE,
         updated_at: Sequelize.DATE
