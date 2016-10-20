@@ -1,3 +1,478 @@
+
+
+
+
+
+
+
+
+
+// req.session.user_id:
+// 1
+// responses:
+// [ { dataValues: 
+//      { id: 1,
+//        smoke_user: true,
+//        smoke_roommate: 'same',
+//        schedule_user: true,
+//        schedule_roommate: 'same',
+//        personality_user: true,
+//        personality_roommate: 'same',
+//        parties_user: true,
+//        parties_roommate: 'same',
+//        friends_user: true,
+//        friends_roommate: 'same',
+//        pets_user: true,
+//        pets_roommate: 'same',
+//        cleanliness_user: true,
+//        cleanliness_roommate: 'same',
+//        music_user: true,
+//        music_roommate: 'same',
+//        created_at: Wed Oct 19 2016 20:49:54 GMT-0700 (PDT),
+//        updated_at: Wed Oct 19 2016 20:49:54 GMT-0700 (PDT),
+//        user_id: 1,
+//        User: [Object] },
+//     _previousDataValues: 
+//      { id: 1,
+//        smoke_user: true,
+//        smoke_roommate: 'same',
+//        schedule_user: true,
+//        schedule_roommate: 'same',
+//        personality_user: true,
+//        personality_roommate: 'same',
+//        parties_user: true,
+//        parties_roommate: 'same',
+//        friends_user: true,
+//        friends_roommate: 'same',
+//        pets_user: true,
+//        pets_roommate: 'same',
+//        cleanliness_user: true,
+//        cleanliness_roommate: 'same',
+//        music_user: true,
+//        music_roommate: 'same',
+//        created_at: Wed Oct 19 2016 20:49:54 GMT-0700 (PDT),
+//        updated_at: Wed Oct 19 2016 20:49:54 GMT-0700 (PDT),
+//        user_id: 1,
+//        User: [Object] },
+//     _changed: {},
+//     '$modelOptions': 
+//      { timestamps: true,
+//        instanceMethods: {},
+//        classMethods: [Object],
+//        validate: {},
+//        freezeTableName: true,
+//        underscored: true,
+//        underscoredAll: false,
+//        paranoid: false,
+//        rejectOnEmpty: false,
+//        whereCollection: null,
+//        schema: null,
+//        schemaDelimiter: '',
+//        defaultScope: {},
+//        scopes: [],
+//        hooks: {},
+//        indexes: [],
+//        name: [Object],
+//        omitNul: false,
+//        tableName: 'responses',
+//        sequelize: [Object],
+//        uniqueKeys: {},
+//        hasPrimaryKeys: true },
+//     '$options': 
+//      { isNewRecord: false,
+//        '$schema': null,
+//        '$schemaDelimiter': '',
+//        include: [Object],
+//        includeNames: [Object],
+//        includeMap: [Object],
+//        includeValidated: true,
+//        attributes: [Object],
+//        raw: true },
+//     hasPrimaryKeys: true,
+//     __eagerlyLoadedAssociations: [],
+//     isNewRecord: false,
+//     User: 
+//      { dataValues: [Object],
+//        _previousDataValues: [Object],
+//        _changed: {},
+//        '$modelOptions': [Object],
+//        '$options': [Object],
+//        hasPrimaryKeys: true,
+//        __eagerlyLoadedAssociations: [],
+//        isNewRecord: false } },
+//   { dataValues: 
+//      { id: 9,
+//        smoke_user: true,
+//        smoke_roommate: '1',
+//        schedule_user: true,
+//        schedule_roommate: '1',
+//        personality_user: true,
+//        personality_roommate: '1',
+//        parties_user: true,
+//        parties_roommate: '1',
+//        friends_user: true,
+//        friends_roommate: '1',
+//        pets_user: true,
+//        pets_roommate: '1',
+//        cleanliness_user: true,
+//        cleanliness_roommate: '1',
+//        music_user: true,
+//        music_roommate: '1',
+//        created_at: Wed Oct 19 2016 21:56:53 GMT-0700 (PDT),
+//        updated_at: Wed Oct 19 2016 21:56:53 GMT-0700 (PDT),
+//        user_id: 1,
+//        User: [Object] },
+//     _previousDataValues: 
+//      { id: 9,
+//        smoke_user: true,
+//        smoke_roommate: '1',
+//        schedule_user: true,
+//        schedule_roommate: '1',
+//        personality_user: true,
+//        personality_roommate: '1',
+//        parties_user: true,
+//        parties_roommate: '1',
+//        friends_user: true,
+//        friends_roommate: '1',
+//        pets_user: true,
+//        pets_roommate: '1',
+//        cleanliness_user: true,
+//        cleanliness_roommate: '1',
+//        music_user: true,
+//        music_roommate: '1',
+//        created_at: Wed Oct 19 2016 21:56:53 GMT-0700 (PDT),
+//        updated_at: Wed Oct 19 2016 21:56:53 GMT-0700 (PDT),
+//        user_id: 1,
+//        User: [Object] },
+//     _changed: {},
+//     '$modelOptions': 
+//      { timestamps: true,
+//        instanceMethods: {},
+//        classMethods: [Object],
+//        validate: {},
+//        freezeTableName: true,
+//        underscored: true,
+//        underscoredAll: false,
+//        paranoid: false,
+//        rejectOnEmpty: false,
+//        whereCollection: null,
+//        schema: null,
+//        schemaDelimiter: '',
+//        defaultScope: {},
+//        scopes: [],
+//        hooks: {},
+//        indexes: [],
+//        name: [Object],
+//        omitNul: false,
+//        tableName: 'responses',
+//        sequelize: [Object],
+//        uniqueKeys: {},
+//        hasPrimaryKeys: true },
+//     '$options': 
+//      { isNewRecord: false,
+//        '$schema': null,
+//        '$schemaDelimiter': '',
+//        include: [Object],
+//        includeNames: [Object],
+//        includeMap: [Object],
+//        includeValidated: true,
+//        attributes: [Object],
+//        raw: true },
+//     hasPrimaryKeys: true,
+//     __eagerlyLoadedAssociations: [],
+//     isNewRecord: false,
+//     User: 
+//      { dataValues: [Object],
+//        _previousDataValues: [Object],
+//        _changed: {},
+//        '$modelOptions': [Object],
+//        '$options': [Object],
+//        hasPrimaryKeys: true,
+//        __eagerlyLoadedAssociations: [],
+//        isNewRecord: false } },
+//   { dataValues: 
+//      { id: 10,
+//        smoke_user: true,
+//        smoke_roommate: '1',
+//        schedule_user: true,
+//        schedule_roommate: '1',
+//        personality_user: true,
+//        personality_roommate: '1',
+//        parties_user: true,
+//        parties_roommate: '1',
+//        friends_user: true,
+//        friends_roommate: '1',
+//        pets_user: true,
+//        pets_roommate: '1',
+//        cleanliness_user: true,
+//        cleanliness_roommate: '1',
+//        music_user: true,
+//        music_roommate: '1',
+//        created_at: Wed Oct 19 2016 22:00:13 GMT-0700 (PDT),
+//        updated_at: Wed Oct 19 2016 22:00:13 GMT-0700 (PDT),
+//        user_id: 1,
+//        User: [Object] },
+//     _previousDataValues: 
+//      { id: 10,
+//        smoke_user: true,
+//        smoke_roommate: '1',
+//        schedule_user: true,
+//        schedule_roommate: '1',
+//        personality_user: true,
+//        personality_roommate: '1',
+//        parties_user: true,
+//        parties_roommate: '1',
+//        friends_user: true,
+//        friends_roommate: '1',
+//        pets_user: true,
+//        pets_roommate: '1',
+//        cleanliness_user: true,
+//        cleanliness_roommate: '1',
+//        music_user: true,
+//        music_roommate: '1',
+//        created_at: Wed Oct 19 2016 22:00:13 GMT-0700 (PDT),
+//        updated_at: Wed Oct 19 2016 22:00:13 GMT-0700 (PDT),
+//        user_id: 1,
+//        User: [Object] },
+//     _changed: {},
+//     '$modelOptions': 
+//      { timestamps: true,
+//        instanceMethods: {},
+//        classMethods: [Object],
+//        validate: {},
+//        freezeTableName: true,
+//        underscored: true,
+//        underscoredAll: false,
+//        paranoid: false,
+//        rejectOnEmpty: false,
+//        whereCollection: null,
+//        schema: null,
+//        schemaDelimiter: '',
+//        defaultScope: {},
+//        scopes: [],
+//        hooks: {},
+//        indexes: [],
+//        name: [Object],
+//        omitNul: false,
+//        tableName: 'responses',
+//        sequelize: [Object],
+//        uniqueKeys: {},
+//        hasPrimaryKeys: true },
+//     '$options': 
+//      { isNewRecord: false,
+//        '$schema': null,
+//        '$schemaDelimiter': '',
+//        include: [Object],
+//        includeNames: [Object],
+//        includeMap: [Object],
+//        includeValidated: true,
+//        attributes: [Object],
+//        raw: true },
+//     hasPrimaryKeys: true,
+//     __eagerlyLoadedAssociations: [],
+//     isNewRecord: false,
+//     User: 
+//      { dataValues: [Object],
+//        _previousDataValues: [Object],
+//        _changed: {},
+//        '$modelOptions': [Object],
+//        '$options': [Object],
+//        hasPrimaryKeys: true,
+//        __eagerlyLoadedAssociations: [],
+//        isNewRecord: false } },
+//   { dataValues: 
+//      { id: 7,
+//        smoke_user: true,
+//        smoke_roommate: '1',
+//        schedule_user: true,
+//        schedule_roommate: '1',
+//        personality_user: true,
+//        personality_roommate: '1',
+//        parties_user: true,
+//        parties_roommate: '1',
+//        friends_user: true,
+//        friends_roommate: '1',
+//        pets_user: true,
+//        pets_roommate: '1',
+//        cleanliness_user: true,
+//        cleanliness_roommate: '1',
+//        music_user: true,
+//        music_roommate: '1',
+//        created_at: Wed Oct 19 2016 21:30:02 GMT-0700 (PDT),
+//        updated_at: Wed Oct 19 2016 21:30:02 GMT-0700 (PDT),
+//        user_id: 3,
+//        User: [Object] },
+//     _previousDataValues: 
+//      { id: 7,
+//        smoke_user: true,
+//        smoke_roommate: '1',
+//        schedule_user: true,
+//        schedule_roommate: '1',
+//        personality_user: true,
+//        personality_roommate: '1',
+//        parties_user: true,
+//        parties_roommate: '1',
+//        friends_user: true,
+//        friends_roommate: '1',
+//        pets_user: true,
+//        pets_roommate: '1',
+//        cleanliness_user: true,
+//        cleanliness_roommate: '1',
+//        music_user: true,
+//        music_roommate: '1',
+//        created_at: Wed Oct 19 2016 21:30:02 GMT-0700 (PDT),
+//        updated_at: Wed Oct 19 2016 21:30:02 GMT-0700 (PDT),
+//        user_id: 3,
+//        User: [Object] },
+//     _changed: {},
+//     '$modelOptions': 
+//      { timestamps: true,
+//        instanceMethods: {},
+//        classMethods: [Object],
+//        validate: {},
+//        freezeTableName: true,
+//        underscored: true,
+//        underscoredAll: false,
+//        paranoid: false,
+//        rejectOnEmpty: false,
+//        whereCollection: null,
+//        schema: null,
+//        schemaDelimiter: '',
+//        defaultScope: {},
+//        scopes: [],
+//        hooks: {},
+//        indexes: [],
+//        name: [Object],
+//        omitNul: false,
+//        tableName: 'responses',
+//        sequelize: [Object],
+//        uniqueKeys: {},
+//        hasPrimaryKeys: true },
+//     '$options': 
+//      { isNewRecord: false,
+//        '$schema': null,
+//        '$schemaDelimiter': '',
+//        include: [Object],
+//        includeNames: [Object],
+//        includeMap: [Object],
+//        includeValidated: true,
+//        attributes: [Object],
+//        raw: true },
+//     hasPrimaryKeys: true,
+//     __eagerlyLoadedAssociations: [],
+//     isNewRecord: false,
+//     User: 
+//      { dataValues: [Object],
+//        _previousDataValues: [Object],
+//        _changed: {},
+//        '$modelOptions': [Object],
+//        '$options': [Object],
+//        hasPrimaryKeys: true,
+//        __eagerlyLoadedAssociations: [],
+//        isNewRecord: false } },
+//   { dataValues: 
+//      { id: 8,
+//        smoke_user: true,
+//        smoke_roommate: '1',
+//        schedule_user: true,
+//        schedule_roommate: '1',
+//        personality_user: true,
+//        personality_roommate: '1',
+//        parties_user: true,
+//        parties_roommate: '1',
+//        friends_user: true,
+//        friends_roommate: '1',
+//        pets_user: true,
+//        pets_roommate: '1',
+//        cleanliness_user: true,
+//        cleanliness_roommate: '1',
+//        music_user: true,
+//        music_roommate: '1',
+//        created_at: Wed Oct 19 2016 21:31:00 GMT-0700 (PDT),
+//        updated_at: Wed Oct 19 2016 21:31:00 GMT-0700 (PDT),
+//        user_id: 4,
+//        User: [Object] },
+//     _previousDataValues: 
+//      { id: 8,
+//        smoke_user: true,
+//        smoke_roommate: '1',
+//        schedule_user: true,
+//        schedule_roommate: '1',
+//        personality_user: true,
+//        personality_roommate: '1',
+//        parties_user: true,
+//        parties_roommate: '1',
+//        friends_user: true,
+//        friends_roommate: '1',
+//        pets_user: true,
+//        pets_roommate: '1',
+//        cleanliness_user: true,
+//        cleanliness_roommate: '1',
+//        music_user: true,
+//        music_roommate: '1',
+//        created_at: Wed Oct 19 2016 21:31:00 GMT-0700 (PDT),
+//        updated_at: Wed Oct 19 2016 21:31:00 GMT-0700 (PDT),
+//        user_id: 4,
+//        User: [Object] },
+//     _changed: {},
+//     '$modelOptions': 
+//      { timestamps: true,
+//        instanceMethods: {},
+//        classMethods: [Object],
+//        validate: {},
+//        freezeTableName: true,
+//        underscored: true,
+//        underscoredAll: false,
+//        paranoid: false,
+//        rejectOnEmpty: false,
+//        whereCollection: null,
+//        schema: null,
+//        schemaDelimiter: '',
+//        defaultScope: {},
+//        scopes: [],
+//        hooks: {},
+//        indexes: [],
+//        name: [Object],
+//        omitNul: false,
+//        tableName: 'responses',
+//        sequelize: [Object],
+//        uniqueKeys: {},
+//        hasPrimaryKeys: true },
+//     '$options': 
+//      { isNewRecord: false,
+//        '$schema': null,
+//        '$schemaDelimiter': '',
+//        include: [Object],
+//        includeNames: [Object],
+//        includeMap: [Object],
+//        includeValidated: true,
+//        attributes: [Object],
+//        raw: true },
+//     hasPrimaryKeys: true,
+//     __eagerlyLoadedAssociations: [],
+//     isNewRecord: false,
+//     User: 
+//      { dataValues: [Object],
+//        _previousDataValues: [Object],
+//        _changed: {},
+//        '$modelOptions': [Object],
+//        '$options': [Object],
+//        hasPrimaryKeys: true,
+//        __eagerlyLoadedAssociations: [],
+//        isNewRecord: false } } ]
+
+
+
+
+
+
+
+
+
+
+
+
+
 var models  = require('../models');
 var express = require('express');
 var router  = express.Router();
@@ -31,8 +506,6 @@ router.get('/', function(req, res) {
 // ???
 router.get('/results',function(req,res){
 
-  var matchdata = matchFunc('colinm');
-  console.log(matchdata);
 
   models.Response.findAll({
     include: [ models.User ]
@@ -42,14 +515,119 @@ router.get('/results',function(req,res){
     // grab the user info from our req.
     // How is it in our req?
     // This info gets saved to req via the users_controller.js file.
-    
-    res.render('results', {
-      user_id: req.session.user_id,
-      email: req.session.user_email,
-      logged_in: req.session.logged_in,
-      responses: responses,
-      matchdata: matchdata
-    });
+
+    // console.log("req.session.user_id:");
+    // console.log(req.session.user_id);
+    // console.log("responses:");
+    // console.log(responses);
+
+
+    // var userArr = [
+    //   {
+    //     userEmail: "colinm",
+    //     name: "Colin",
+    //     photoLink: "http://coolwildlife.com/wp-content/uploads/galleries/post-3004/Fox%20Picture%20003.jpg",
+    //     scores: [
+    //       [true,"yes"],
+    //       [true,"yes"],
+    //       [true,"no"]
+    //     ]
+    //   },
+    //   {
+    //     userEmail: "michellel",
+    //     name: "Michelle",
+    //     photoLink: "https://www.sitebuilderreport.com/assets/facebook-stock-up-08c6c9a855df26a3b13a34ac62bb75cc.jpg",
+    //     scores: [
+    //       [true,"dc"],
+    //       [true,"dc"],
+    //       [true,"yes"]
+    //     ]
+    //   },
+    //   {
+    //     userEmail: "stepho",
+    //     name: "Stephanie",
+    //     photoLink: "http://3.bp.blogspot.com/-Hu9NZ79ry7g/TzeRi8Q7V7I/AAAAAAAAQvo/p2YQD5hs1s8/s1600/free+stock+photos+(10).jpg",
+    //     scores: [
+    //       [true,"no"],
+    //       [false,"no"],
+    //       [false,"no"]
+    //     ]
+    //   },
+    //   {
+    //     userEmail: "omarp",
+    //     name: "Omar",
+    //     photoLink: "http://orig02.deviantart.net/e5ff/f/2007/279/f/1/bones___1_by_mjranum_stock.jpg",
+    //     scores: [
+    //       [true,"yes"],
+    //       [false,"dc"],
+    //       [false,"no"]
+    //     ]
+    //   },
+    //   {
+    //     userEmail: "jeffm",
+    //     name: "Jeff",
+    //     photoLink: "http://coolwildlife.com/wp-content/uploads/galleries/post-3004/Fox%20Picture%20003.jpg",
+    //     scores: [
+    //       [false,"no"],
+    //       [false,"no"],
+    //       [false,"dc"]
+    //     ]
+    //   }];
+
+      var userArr = [];
+
+
+
+
+      models.User.findAll().then(function(usertable){
+        for(var i=0;i<usertable.length;i++){
+
+          // console.log("responses[i].dataValues.smoke_user:");
+          // console.log(responses[i].dataValues.smoke_user),
+          // console.log("responses:");
+          // console.log(responses);
+          // console.log(i);
+
+          userArr.push({
+            user_id: responses[i].dataValues.user_id,
+            email: usertable[i].dataValues.email,
+            name: "Name goes here",
+            photoLink: "http://coolwildlife.com/wp-content/uploads/galleries/post-3004/Fox%20Picture%20003.jpg",
+            scores: [
+              [responses[i].dataValues.smoke_user, responses[i].dataValues.smoke_roommate],
+              [responses[i].dataValues.schedule_user, responses[i].dataValues.schedule_roommate],
+              [responses[i].dataValues.personality_user, responses[i].dataValues.personality_roommate],
+              [responses[i].dataValues.parties_user, responses[i].dataValues.parties_roommate],
+              [responses[i].dataValues.friends_user, responses[i].dataValues.friends_roommate],
+              [responses[i].dataValues.pets_user, responses[i].dataValues.pets_roommate],
+              [responses[i].dataValues.cleanliness_user, responses[i].dataValues.cleanliness_roommate],
+              [responses[i].dataValues.music_user, responses[i].dataValues.music_roommate]
+            ]
+          });
+        }  
+
+        // console.log("userArr[0].scores:");
+        // console.log(userArr[0].scores);
+        // console.log('req.session.user_id:');
+        // console.log(req.session.user_id);
+
+        var matchdata = matchFunc(2, userArr);
+
+
+      // console.log("matchdata:");
+      // console.log(matchdata);
+      
+        res.render('results', {
+          user_id: req.session.user_id,
+          email: req.session.user_email,
+          logged_in: req.session.logged_in,
+          responses: responses,
+          matchdata: matchdata
+        });
+
+      });
+
+
   });
 })
 // ???
@@ -88,7 +666,7 @@ router.post('/create', function (req, res) {
   })
   // connect the .create to this .then
   .then(function() {
-    res.redirect('/');
+    res.redirect('/index/results');
   });
 });
 

@@ -9,7 +9,7 @@ router.get('/new', function(req,res) {
 });
 
 router.get('/sign-in', function(req,res) {
-	res.render('users/sign_in');
+	res.render('cats/index');
 });
 
 router.get('/sign-out', function(req,res) {
