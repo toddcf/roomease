@@ -170,7 +170,7 @@
   {{!-- UPDATE "CREATE" AND "POST" NOW THAT IT'S NOT A FORM --}}
   {{!-- <form action="/create" method="POST"> --}}
 
- <form class="create-update-form" action="index/create" method="POST">
+ <form class="create-update-form" action="index/update/{{this.id}}?_method=PUT" method="POST">
     <h2>Roommate Compatibility</h2>
 
       <h3><strong>Smoking</strong></h3>
@@ -301,8 +301,12 @@
 
 
     {{!--   <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>Submit</button> --}}
-     <button><a href="index/results">Submit</a></button>
+     <button type="submit">Add Cat</button>
  </form>
+
+
+
+    <a href="index/results">Submit</a>
 
   </div>
 {{/if}}
