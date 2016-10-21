@@ -47,7 +47,7 @@ router.post('/login', function(req, res) {
 					// we save the logged in status to the session
           req.session.logged_in = true;
           // the username to the session
-					req.session.username = user.username;
+		  req.session.firstname = user.firstname;
 					// the user id to the session
           req.session.user_id = user.id;
           // and the user's email.
@@ -87,6 +87,7 @@ router.post('/create', function(req,res) {
 						// storing the email they sent and the hash you just made
 						models.User.create({
 							email: req.body.email,
+							firstname:req.body.firstname,
 							password_hash: hash
 						})
 						// In a .then promise connected to that create method,
@@ -101,7 +102,7 @@ router.post('/create', function(req,res) {
 							// we save the logged in status to the session
 		          req.session.logged_in = true;
 		          // the username to the session
-							req.session.username = user.username;
+				  req.session.firstname = user.firstname;
 							// the user id to the session
 		          req.session.user_id = user.id;
 		          // and the user's email.
