@@ -30,6 +30,8 @@ var cats_controller = require('./controllers/cats_controller');
 
 var users_controller = require('./controllers/users_controller');
 
+var update_controller = require('./controllers/update_controller');
+
 
 
 
@@ -67,6 +69,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', application_controller);
 app.use('/index', cats_controller);
 app.use('/users', users_controller);
+app.use('/update', update_controller);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
