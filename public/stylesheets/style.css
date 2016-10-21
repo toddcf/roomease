@@ -97,12 +97,12 @@ form h1 {
 }
 
 #toprow {
+	margin: 5px;
 	margin-bottom: 20px;
 }
 #aboutbox {
 	border: 1px black dashed;
 	padding: 10px; 
-	margin: 5px;
 	margin-left: 15px;
 }
 .sectionBlock {
