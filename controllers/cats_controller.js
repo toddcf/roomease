@@ -90,6 +90,7 @@ router.get('/results',function(req,res){
           user_id: req.session.user_id,
           email: req.session.user_email,
           logged_in: req.session.logged_in,
+          firstname: req.session.firstname,
           responses: responses,
           matchdata: matchdata
         });
