@@ -55,7 +55,10 @@ router.put('/info/update/:user_id', function(req,res) {
     music_user: req.body.music_user,
     music_roommate: req.body.music_roommate,
 
-    imageicon_user: req.body.imageicon_user
+    imageicon_user: req.body.imageicon_user,
+
+    bio_user:req.body.bio_user,
+    zipcode_user: req.body.zipcode_user
   },
   {
     where: {user_id: req.session.user_id}

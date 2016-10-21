@@ -131,6 +131,9 @@ router.post('/create', function (req, res) {
 
     imageicon_user: req.body.imageicon_user,
 
+    bio_user:req.body.bio_user,
+    zipcode_user: req.body.zipcode_user,
+
     user_id: req.session.user_id
   })
   // connect the .create to this .then
@@ -171,7 +174,11 @@ router.put('/update/:id', function(req,res) {
     music_user: req.body.music_user,
     music_roommate: req.body.music_roommate,
 
-    imageicon_user: req.body.imageicon_user
+    imageicon_user: req.body.imageicon_user,
+
+    bio_user:req.body.bio_user,
+    zipcode_user: req.body.zipcode_user
+
   },
   {
     where: { id : req.params.id }
