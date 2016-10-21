@@ -62,7 +62,7 @@ router.put('/info/update/:user_id', function(req,res) {
   })
   // connect it to this .then.
   .then(function (result) {
-    res.redirect('/');
+    res.redirect('/index/results');
   }, function(rejectedPromiseError){
 
   });
