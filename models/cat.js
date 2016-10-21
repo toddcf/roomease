@@ -30,6 +30,9 @@ module.exports = function(sequelize, DataTypes) {
     music_user: { type: DataTypes.BOOLEAN, defaultValue: false },
     music_roommate: DataTypes.STRING,
 
+    bio_user: {type: DataTypes.STRING, defaultValue:"No Bio Available" },
+    zipcode_user: DataTypes.INTEGER,
+
   }, {
     // don't add the timestamp attributes (updatedAt, createdAt)
       //timestamps: false,

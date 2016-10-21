@@ -2,7 +2,7 @@
   "development": {
     "host": "localhost",
     "username": "root",
-    "password": "drummrboy1",
+    "password": "guagua",
     "database": "dom_test",
     "dialect": "mysql"
 
