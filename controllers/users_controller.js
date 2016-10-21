@@ -53,7 +53,7 @@ router.post('/login', function(req, res) {
           // and the user's email.
           req.session.user_email = user.email;
 
-          res.redirect('/');
+          res.redirect('/update/info');
         }
         // if the result is anything but true (password invalid)
         else{
@@ -63,7 +63,6 @@ router.post('/login', function(req, res) {
     });
   })
 });
-
 
 // register a user
 router.post('/create', function(req,res) {
