@@ -147,7 +147,7 @@
                 {{!-- replace stephanie with {{name}} --}}
                 {{!-- <h3 id="welcome">hi Stephanie</h3> --}}
 
-                <h5 class="welcome">{{email}}</h5>
+                <h5 class="welcome">{{firstname}}</h5>
                 <p class="welcome"><a href="/users/sign-out">Sign Out</a></p>
 
             </div>
@@ -309,16 +309,10 @@
 
 
     {{!--   <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>Submit</button> --}}
-     <button type="submit">Submit</button>
+     <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
  </form>
 
   </div>
 
 {{/if}}
 
-
-
-{{#if user_id }}
-    {{#unless responses}}
-    {{/unless}}
-{{/if }}
