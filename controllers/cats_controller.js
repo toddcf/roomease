@@ -49,7 +49,16 @@ router.get('/results',function(req,res){
       var userArr = [];
 
       models.User.findAll().then(function(usertable){
+        
+        var currentUserZip;
         for(var i=0;i<responses.length;i++){
+          if(req.session.user_id == responses[i].dataValues.user_id)
+            // currentUserZip = responses[i].dataValues.zip;
+        }
+
+        for(var i=0;i<responses.length;i++){
+
+          // if(responses[i].dataValues.zip == currentUserZip){
 
           userArr.push({
             user_id: responses[i].dataValues.user_id,
@@ -67,6 +76,9 @@ router.get('/results',function(req,res){
               [responses[i].dataValues.music_user, responses[i].dataValues.music_roommate]
             ]
           });
+
+        // }
+
         }  
 
         // If you are the first person to sign up, create dummy data for the results table
@@ -104,6 +116,11 @@ router.post('/create', function (req, res) {
   // =========
   // use the Cat model to create a cat based on what's
   // passed in req.body (name, sleepy, user_id)
+
+  console.log("req.session.user_id:");
+  console.log(req.session.user_id);
+
+
   models.Response.create({
     smoke_user: req.body.smoke_user,
     smoke_roommate: req.body.smoke_roommate,
