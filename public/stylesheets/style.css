@@ -88,12 +88,82 @@
 /*----------------------------*/
 
 /*start styling for survey*/
+
+form h1 {
+	text-align: center;
+}
 #compatsurvey {
 	margin-top: 100px;
 }
+
+#toprow {
+	margin-bottom: 20px;
+}
+#aboutbox {
+	border: 1px black dashed;
+	padding: 10px; 
+	margin: 5px;
+	margin-left: 15px;
+}
+.sectionBlock {
+	border: #c7ddda 1px solid;
+	padding: 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin: 5px;
+	background-color: #c7ddda;
+}
+
+#surveysubmitbtn {
+	margin: 5px;
+	background-color: #4b907b;
+	border: #4b907b;
+}
+
+.index-prop-img img {
+
+  background-color: transparent;
+  width: auto;
+  -webkit-filter: drop-shadow(12px 12px 0 rgba(0, 0, 0, 0.2)) drop-shadow(-20px 16px rgba(0,
+    0, 0, 0.1));
+  filter: drop-shadow(12px 12px 0 rgba(0, 0, 0, 0.2)) drop-shadow(-20px 16px rgba(0,
+    0, 0, 0.1));
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out; }
+  @media (max-width: 992px) {
+    .index-prop-img img {
+      height: 220px;   }
+}
+    @media (max-width: 767px) {
+      .index-prop-img img {
+        height: 155px;
+        padding-top: 30px;
+        padding-left: 50px;
+        filter: none;
+        -webkit-filter: none;   }
+}
+      .index-prop-img img:hover, .index-prop-img img:focus {
+        transform: translate(0, -5px);
+        -webkit-filter: drop-shadow(14px 15px 0px rgba(0, 0, 0, 0.12)) drop-shadow(-23px 19px rgba(0,
+                0, 0, 0.1));
+        filter: drop-shadow(14px 15px 0px rgba(0, 0, 0, 0.12)) drop-shadow(-23px 19px rgba(0,
+                0, 0, 0.1));
+        transition: all 0.1s ease-out;
+        -webkit-transition: all 0.1s ease-out; }
+        .index-prop-img img:active {
+          transform: translate(0, 10px);
+          -webkit-filter: drop-shadow(8px 2px 0px rgba(0, 0, 0, 0.2)) drop-shadow(-2px 6px rgba(0,
+                    0, 0, 0.1));
+          filter: drop-shadow(8px 2px 0px rgba(0, 0, 0, 0.2)) drop-shadow(-2px 6px rgba(0,
+                    0, 0, 0.1));
+          transition: all 0.1s ease-out;
+          -webkit-transition: all 0.1s ease-out; }
+
 /*end styling for survey*/
-
-
 /*----------------------------*/
 
 /*start results.handlebars styling*/
