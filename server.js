@@ -1,12 +1,14 @@
-// Dependencies
-var express 		= require('express');
-var path 			= require('path');
-var favicon 		= require('serve-favicon');
-var logger 			= require('morgan');
-var cookieParser 	= require('cookie-parser');
-var bodyParser 		= require('body-parser');
-var session 		= require('express-session'); 
-var methodOverride 	= require('method-override');
+var express = require('express');
+var path = require('path');
+var favicon = require('serve-favicon');
+var logger = require('morgan');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+var session = require('express-session'); 
+var methodOverride = require('method-override');
+var bparser = require('body-parser');
+var nodeMail = require('nodemailer');
+
 
 
 // Model controllers (rather than routes)
@@ -69,4 +71,7 @@ app.use(function(err, req, res, next) {
 });
 
 
+// our module get's exported as app.
 module.exports = app;
+
+

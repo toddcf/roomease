@@ -39,6 +39,12 @@
 </div>
 </nav>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+
 
 {{!-- page contents in a container--}}
 <div class="container" id="conbody">
@@ -66,6 +72,14 @@
                 <p>Email: {{this.friendData.email}}
                 <p>Zip code: {{this.friendData.zip}}</p>
                 <p>Bio: {{this.friendData.bio}}</p>
+                <form id="contact-form" method='post', action='results/send/'>
+                      <input type="name" id="name" name="name" value="{{this.friendData.name}}" style="display: none;">
+                      <input type="email" id="email" name="email" value="{{this.friendData.email}}" style="display: none;">
+                      <label for="message">Let's send {{this.friendData.name}} a message</label>
+                      <br>
+                      <textarea id="message" name="message" required="required" style="width: 50%;float:left;"></textarea>
+                  <input type="submit" style="float:left;margin-top: 2.4%;">
+                 </form>
             </div>
 
         </div>
