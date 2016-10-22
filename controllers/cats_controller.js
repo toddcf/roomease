@@ -2,7 +2,7 @@ var models  = require('../models');
 var express = require('express');
 var router  = express.Router();
 var matchFunc = require('../matchingAlgorithm.js');
-var nodeMail = require('nodemailer')
+var nodeMail = require('nodemailer');
 
 
 router.get('/', function(req, res) {
