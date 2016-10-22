@@ -10,13 +10,7 @@ router.get('/info', function(req,res) {;
     where: {user_id: req.session.user_id}
   }).then(function(response) {
     if (response == null){
-      res.render('update/info', {
-      user_id: req.session.user_id,
-      email: req.session.user_email,
-      logged_in: req.session.logged_in,
-      firstname: req.session.firstname,
-      response: response
-    });
+      res.redirect('/');
     }else{
     res.redirect('/index/results');
     }
