@@ -10,16 +10,15 @@ router.get('/info', function(req,res) {;
     where: {user_id: req.session.user_id}
   }).then(function(response) {
     if (response == null){
-    	res.redirect('/')
-    }else{
       res.render('update/info', {
       user_id: req.session.user_id,
       email: req.session.user_email,
       logged_in: req.session.logged_in,
       firstname: req.session.firstname,
       response: response
-
     });
+    }else{
+    res.redirect('/index/results');
     }
   })
 });
@@ -67,7 +66,7 @@ router.put('/info/update/:user_id', function(req,res) {
   })
   // connect it to this .then.
   .then(function (result) {
-    res.redirect('/update/info');
+    res.redirect('/index/results');
   }, function(rejectedPromiseError){
 
   });

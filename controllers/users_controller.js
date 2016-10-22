@@ -54,7 +54,7 @@ router.post('/login', function(req, res) {
           // and the user's email.
           req.session.user_email = user.email;
 
-          res.redirect('/index/results');
+          res.redirect('/update/info');
         }
         // if the result is anything but true (password invalid)
         else{
