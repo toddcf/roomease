@@ -23,9 +23,9 @@
 
 
                 {{#if logged_in}}
-                <h5 class="welcome">{{firstname}}</h5>
                 <p class="welcome"><a href="/users/sign-out">Sign Out</a></p>
-                <button class="btn btn-primary btn-lg btn-block hideBar"class="button hideBar" id="hideBar">Update me</button>
+                <h5 class="welcome">{{firstname}}</h5>
+                <button class="btn btn-primary btn-lg btn-block hideBar"class="button hideBar" id="hideBar">Update</button>
                 {{/if}}
 
             </div>
@@ -38,13 +38,6 @@
     </div>
 </div>
 </nav>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
 
 {{!-- page contents in a container--}}
 <div class="container" id="conbody">
@@ -234,7 +227,6 @@
 
       <div class="fliter-button">
           <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
-          <button class="btn btn-primary btn-lg btn-block" id="cancelbtn">Cancel</button>
       </div>
           </form>
       </div> 
