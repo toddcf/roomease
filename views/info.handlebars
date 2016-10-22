@@ -1,3 +1,129 @@
+{{#unless logged_in}}
+<div class="jumbotron" id="jumbohead">
+  <div class="container">
+    <div class="row">
+    
+
+    {{!-- logo block--}}
+    <div class="col-md-5">
+      <h1>room<span class="bracket">[</span>ease<span class="bracket">]</span></h1>
+    </div>
+    
+    {{!-- blank column for spacing--}}
+    <div class="col-md-3">
+    </div>
+
+    {{!-- login block --}}
+    <div class="col-md-4">
+    <form class="form-horizontal" id="signInForm" action="/users/login" method="POST">
+      <div class="form-group">
+        <label for="oldEmail" class="col-sm-3 control-label">Email</label>
+        <div class="col-sm-6">
+          <input type="email" class="form-control" id="oldEmail" name="email" placeholder="joebruin@ucla.edu">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="oldPassword" class="col-sm-3 control-label">Password</label>
+        <div class="col-sm-6">
+          <input type="password" class="form-control" id="oldPassword" name="password" placeholder="********">
+        </div>
+        <div class="col-sm-3">
+          <button type="submit" class="btn btn-default" id="signInButton">Log in</button>
+        </div>
+      </div>
+    </form>
+    </div>    
+  </div>
+</div>
+</div>
+
+<div class="container">
+
+  <div class="row">
+  
+  {{!-- about --}}
+  <div class="col-md-7">
+    <h2>Connecting you with compatible roommates to make the rest easy.</h2>
+    
+    <div class="row aboutRow">
+      <div class="col-sm-2">
+        <img class="reIcon" src="https://cdn0.iconfinder.com/data/icons/pixon-1/24/filter_list_order_sequence_sort_sorting-512.png"/>
+      </div>
+      <div class="col-sm-10 textCol">
+        <h3 class="description">Tell us about yourself </h3>
+        <p class="description"> and exactly what you want in a roommate by filling out a quick survey. Then let room[ease] work its magic to find your most compatible matches.</span></p>
+      </div>
+    </div>
+
+    <div class="row aboutRow">
+      <div class="col-sm-2">
+        <img class="reIcon" src="https://cdn3.iconfinder.com/data/icons/users/100/connect_user-512.png"/>
+      </div>
+      <div class="col-sm-10 textCol">
+        <h3 class="description">Contact top roommates </h3>
+        <p class="description"> that have already been sorted by the room[ease] algorithm to maximize compatibility based on your shared preferences.</span></p>
+      </div>
+    </div>
+
+    <div class="row aboutRow">
+      <div class="col-sm-2">
+        <img class="reIcon" src="http://plainicon.com/dboard/userprod/2805_fce53/prod_thumb/plainicon.com-50382-512px-5d4.png"/>
+      </div>
+      <div class="col-sm-10 textCol">
+        <h3 class="description">Rest easy </h3>
+        <p class="description"> knowing that your personal information is always safe and secure.</span></p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-sm-1">
+  </div>
+
+  {{!-- sign up --}}
+  <div class="col-md-4" id="signupblock">
+  <h1>Sign Up</h1>
+  <form id="signUpForm" action="/users/create" method="POST">
+    <div class="form-group">
+{{!--       <label class="sr-only" for="firstName">First Name</label>
+      <input type="text" class="form-control" id="firstName" placeholder="First Name">
+    </div> --}}
+{{!--     <div class="form-group">
+      <label class="sr-only" for="lastName">Last Name</label>
+      <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+    </div> --}}
+    <br>
+    <div class="form-group"><br>
+      <label class="sr-only" for="emailAddress">Email Address</label>
+      <input type="text" class="form-control" id="emailAddress" name="email" placeholder="Email Address">
+    </div>
+
+    <div class="form-group">
+      <label class="sr-only" for="userName">New User Name</label>
+      <input type="text" class="form-control" id="userName" name="username" placeholder="New User Name">
+    </div>
+
+    <div class="form-group">
+      <label class="sr-only" for="newPass">New Password</label>
+      <input type="password" class="form-control" id="newPass" name="password" placeholder="New Password">
+    </div>
+
+    <div>
+      <button type="submit" class="btn btn-default" id="signUpButton">Sign Up</button>
+    </div>
+
+  </form>
+
+  </div>
+  </div>
+
+</div>
+
+
+
+{{/unless}}
+
+{{#if logged_in}}
 
 {{!-- header bar --}}
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -21,79 +147,29 @@
                 {{!-- replace stephanie with {{name}} --}}
                 {{!-- <h3 id="welcome">hi Stephanie</h3> --}}
 
-
-                {{#if logged_in}}
                 <h5 class="welcome">{{firstname}}</h5>
                 <p class="welcome"><a href="/users/sign-out">Sign Out</a></p>
-                <button class="btn btn-primary btn-lg btn-block hideBar"class="button hideBar" id="hideBar">Update me</button>
-                {{/if}}
 
             </div>
 
             <div class="col-xs-2">
                 {{!-- current user pic goes here --}}
-                <a href="https://desolate-bastion-91097.herokuapp.com/"><img id="userpic" src="http://emojipedia-us.s3.amazonaws.com/cache/e3/ab/e3ab863e82cda24ea3158bebce132413.png"></a>
+                <img id="userpic" src="http://coolwildlife.com/wp-content/uploads/galleries/post-3004/Fox%20Picture%20003.jpg">
             </div>    
         </div>
     </div>
 </div>
+
 </nav>
 
-<br>
-<br>
-<br>
-<br>
-<br>
+  <div class="container" id="compatsurvey">
 
+  {{!-- UPDATE "CREATE" AND "POST" NOW THAT IT'S NOT A FORM --}}
+  {{!-- <form action="/create" method="POST"> --}}
 
-{{!-- page contents in a container--}}
-<div class="container" id="conbody">
-<h1 class="header1text">Results</h1>
-
-    {{!-- dummy data sample results block--}}
-    {{!-- will want to use handlebars each to get top 10 or so results --}}
-    <div class="results">
-
-    {{#each matchdata}}
-        <div class="row match">
-            {{!-- div stores compatibility rating --}}
-            <div class="compatrate">
-                <h3>{{this.compat}}%</h3>
-            </div>
-            
-            {{!-- div holds profile picture --}}
-            <div class="col-xs-3">
-                <img class="profpic" src={{this.friendData.photoLink}}>
-            </div>
-
-            {{!-- div for main info: name, bio, whatever other stuff we want to show --}}
-            <div class="col-xs-9">
-                <h4>Name: {{this.friendData.name}}</h4>
-                <p>Email: {{this.friendData.email}}
-                <p>Zip code: {{this.friendData.zip}}</p>
-                <p>Bio: {{this.friendData.bio}}</p>
-                <form id="contact-form" method='post', action='results/send/'>
-                      <input type="name" id="name" name="name" value="{{this.friendData.name}}" style="display: none;">
-                      <input type="email" id="email" name="email" value="{{this.friendData.email}}" style="display: none;">
-                      <label for="message">Let's send {{this.friendData.name}} a message</label>
-                      <br>
-                      <textarea id="message" name="message" required="required" style="width: 50%;float:left;"></textarea>
-                  <input type="submit" style="float:left;margin-top: 2.4%;">
-                 </form>
-            </div>
-
-        </div>
-    {{/each}}
-</div>
-
-{{!-- <form class="create-update-form" action="info/update/{{user_id}}?_method=PUT" method="POST"> --}}
-
-<div class="fliter-modal" id="flitermodal" style="display: none;">
-    <div class="fliter-modal-content">
-          <div class="closeb"> yoyoy</div>
-          <span class="fliter-modal-close"> × </span>
-
-<form class="create-update-form" action="results/update/{{user_id}}?_method=PUT" method="POST">
+{{!-- <form class="create-update-form" action="info/create" method="POST"> --}}
+  <button type="submit">Submit</button>
+<form class="create-update-form" action="info/update/{{user_id}}?_method=PUT" method="POST">
     <h2>Roommate Compatibility</h2>
 
       <h3><strong>Smoking</strong></h3>
@@ -232,44 +308,12 @@
       <br>
       <br>
 
-      <div class="fliter-button">
-          <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
-          <button class="btn btn-primary btn-lg btn-block" id="cancelbtn">Cancel</button>
-      </div>
-          </form>
-      </div> 
- </div>
 
- <script>
-var flitermodal =  document.getElementById('flitermodal');
-var closebtn =  document.getElementsByClassName('fliter-modal-close')[0];
-var openbtn =  document.getElementById('hideBar');
-var flitercontent =  document.getElementsByClassName('fliter-modal-content');
+    {{!--   <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>Submit</button> --}}
+     <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+ </form>
 
+  </div>
 
-openbtn.onclick = function(){
-    if (flitermodal.style.display = "none"){
-            flitermodal.style.display = "block"
-        }else{
-            console.log("Fliter Modal is not none")
-        }
-}
-
-closebtn.onclick = function(){
-    if(flitermodal.style.display="block"){
-        flitermodal.style.display="none"
-    }else{
-        console.log('somethings wrong');
-    }
-}
-
-window.onclick = function(event) {
-    if (event.target == flitermodal) {
-        flitermodal.style.display = "none";
-    }
-}
-</script>
-
-
-
+{{/if}}
 
