@@ -2,6 +2,7 @@ var models  = require('../models');
 var express = require('express');
 var router  = express.Router();
 var matchFunc = require('../matchingAlgorithm.js');
+var nodeMail = require('nodemailer');
 
 
 router.get('/', function(req, res) {
@@ -266,7 +267,6 @@ router.put('/update/:id', function(req,res) {
   });
 });
 
-
 router.delete('/delete/:id', function(req,res) {
   // SOLUTION:
   // =========
@@ -283,6 +283,45 @@ router.delete('/delete/:id', function(req,res) {
   });
 
 });
+
+
+router.post('/results/send', function(req,res) {
+  var transporter = nodeMail.createTransport({
+    service: 'Gmail',
+    auth: {
+      user: 'femichelletest@gmail.com',
+      pass: 'femichelle'
+    }
+  })
+
+var mailOptions = {
+    from:     'Noreply',
+    to:       'mluo0301@gmail.com',
+    subject:  'Roomate Request',
+    text:     'you have a submission with the following... Name: '+ req.body.name +'Email:'+ req.body.name+'Message: '+req.body.message,
+    html:     '<p>you have a submission with the following...</p><ul><li>Name:'+req.body.name+'</li><li>Email:'+req.body.email+'<li>Message:'+ req.body.message+'</li></li></ul>'
+  }
+
+  transporter.sendMail(mailOptions, function(err,info) {
+    if(err) {
+      console.log(err)
+      res.redirect('/index/results')
+    }else {
+      console.log('Message send to '+ req.body.email)
+      res.redirect('/index/results')
+    }
+  })
+})
+
+
+
+
+
+
+
+
+
+
 
 
 module.exports = router;

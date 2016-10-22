@@ -180,11 +180,14 @@ form h1 {
 }
 
 .welcome {
-	line-height: 30px;
-	color: white;
-	text-align: right;
-	padding-bottom: 0px;
-	margin-bottom: 0px;
+    line-height: 34px;
+    color: white;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    float: right;
+    margin-top: 2%;
+    margin-left: 3%;
+    font-size: 147%;
 }
 
 #userpic {
@@ -278,10 +281,11 @@ form h1 {
 }
 
 .hideBar{
-    width: 81px;
+    width: 51%;
     font-size: 15px;
     padding: 1%;
     align-content: center;
+    float: right;
 }
 
 

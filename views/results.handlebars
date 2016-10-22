@@ -23,9 +23,9 @@
 
 
                 {{#if logged_in}}
-                <h5 class="welcome">{{firstname}}</h5>
                 <p class="welcome"><a href="/users/sign-out">Sign Out</a></p>
-                <button class="btn btn-primary btn-lg btn-block hideBar"class="button hideBar" id="hideBar">Update me</button>
+                <h5 class="welcome">{{firstname}}</h5>
+                <button class="btn btn-primary btn-lg btn-block hideBar"class="button hideBar" id="hideBar">Update</button>
                 {{/if}}
 
             </div>
@@ -38,7 +38,6 @@
     </div>
 </div>
 </nav>
-
 
 {{!-- page contents in a container--}}
 <div class="container" id="conbody">
@@ -66,6 +65,14 @@
                 <p>Email: {{this.friendData.email}}
                 <p>Zip code: {{this.friendData.zip}}</p>
                 <p>Bio: {{this.friendData.bio}}</p>
+                <form id="contact-form" method='post', action='results/send/'>
+                      <input type="name" id="name" name="name" value="{{this.friendData.name}}" style="display: none;">
+                      <input type="email" id="email" name="email" value="{{this.friendData.email}}" style="display: none;">
+                      <label for="message">Let's send {{this.friendData.name}} a message</label>
+                      <br>
+                      <textarea id="message" name="message" required="required" style="width: 50%;float:left;"></textarea>
+                  <input type="submit" style="float:left;margin-top: 2.4%;">
+                 </form>
             </div>
 
         </div>
