@@ -2,7 +2,7 @@
   "development": {
     "host": "localhost",
     "username": "root",
-    "password": "guagua",
+    "password": "drummrboy1",
     "database": "dom_test",
     "dialect": "mysql"
 
@@ -15,10 +15,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "odnw47wd6wxucesx",
+    "password": "web6n80xmskinr52",
+    "database": "yao78mwbg54t7v82",
+    "host": "uoa25ublaow4obx5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
 }
