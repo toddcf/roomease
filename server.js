@@ -6,8 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session'); 
 var methodOverride = require('method-override');
-var bparser = require('body-parser')
-var nodeMail = require('nodemailer')
+var bparser = require('body-parser');
+var nodeMail = require('nodemailer');
 
 
 
