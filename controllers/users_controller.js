@@ -9,7 +9,7 @@ router.get('/new', function(req,res) {
 });
 
 router.get('/sign-in', function(req,res) {
-	res.render('users/sign_in');
+	res.render('cats/index');
 });
 
 router.get('/sign-out', function(req,res) {
@@ -17,6 +17,7 @@ router.get('/sign-out', function(req,res) {
      res.redirect('/')
   })
 });
+
 
 
 // login
@@ -47,13 +48,13 @@ router.post('/login', function(req, res) {
 					// we save the logged in status to the session
           req.session.logged_in = true;
           // the username to the session
-					req.session.username = user.username;
+		  req.session.firstname = user.firstname;
 					// the user id to the session
           req.session.user_id = user.id;
           // and the user's email.
           req.session.user_email = user.email;
 
-          res.redirect('/');
+          res.redirect('/index/results');
         }
         // if the result is anything but true (password invalid)
         else{
@@ -63,7 +64,6 @@ router.post('/login', function(req, res) {
     });
   })
 });
-
 
 // register a user
 router.post('/create', function(req,res) {
@@ -88,6 +88,7 @@ router.post('/create', function(req,res) {
 						// storing the email they sent and the hash you just made
 						models.User.create({
 							email: req.body.email,
+							firstname:req.body.firstname,
 							password_hash: hash
 						})
 						// In a .then promise connected to that create method,
@@ -102,7 +103,7 @@ router.post('/create', function(req,res) {
 							// we save the logged in status to the session
 		          req.session.logged_in = true;
 		          // the username to the session
-							req.session.username = user.username;
+				  req.session.firstname = user.firstname;
 							// the user id to the session
 		          req.session.user_id = user.id;
 		          // and the user's email.

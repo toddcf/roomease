@@ -2,6 +2,10 @@
 
 module.exports = function(sequelize, DataTypes) {
   var Response = sequelize.define("Response", {
+
+
+    imageicon_user: {type: DataTypes.STRING, defaultValue:"https://u.o0bc.com/avatars/no-user-image.gif" },
+
     smoke_user: { type: DataTypes.BOOLEAN, defaultValue: false },
     smoke_roommate: DataTypes.STRING,
 
@@ -25,6 +29,9 @@ module.exports = function(sequelize, DataTypes) {
         
     music_user: { type: DataTypes.BOOLEAN, defaultValue: false },
     music_roommate: DataTypes.STRING,
+
+    bio_user: {type: DataTypes.STRING, defaultValue:"No Bio Available" },
+    zipcode_user: DataTypes.INTEGER,
 
   }, {
     // don't add the timestamp attributes (updatedAt, createdAt)

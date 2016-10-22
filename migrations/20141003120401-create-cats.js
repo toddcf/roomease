@@ -12,6 +12,9 @@ module.exports = {
         user_id: {
           type: Sequelize.INTEGER
         },
+
+        imageicon_user: {type: Sequelize.STRING, default:"https://u.o0bc.com/avatars/no-user-image.gif"},
+
         smoke_user: {type: Sequelize.BOOLEAN, default: false},
         smoke_roommate: Sequelize.STRING,
 
@@ -35,6 +38,9 @@ module.exports = {
         
         music_user: {type: Sequelize.BOOLEAN, default: false},
         musi_roommatec: Sequelize.STRING,
+
+        bio_user: {type: Sequelize.STRING, default:"No Bio Available"},
+        zipcode_user: Sequelize.INTEGER,
 
         created_at: Sequelize.DATE,
         updated_at: Sequelize.DATE
