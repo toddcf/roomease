@@ -50,13 +50,24 @@ router.get('/results',function(req,res){
       var userArr = [];
 
       models.User.findAll().then(function(usertable){
+        
+        // var currentUserZip;
+        // for(var i=0;i<responses.length;i++){
+        //   if(req.session.user_id == responses[i].dataValues.user_id)
+        //     // currentUserZip = responses[i].dataValues.zip;
+        // }
+
         for(var i=0;i<responses.length;i++){
+
+          // if(responses[i].dataValues.zip == currentUserZip){
 
           userArr.push({
             user_id: responses[i].dataValues.user_id,
             email: usertable[i].dataValues.email,
-            name: "Name goes here",
+            name: usertable[i].dataValues.firstname,
             photoLink: responses[i].dataValues.imageicon_user,
+            zip: responses[i].dataValues.zipcode_user,
+            bio: responses[i].dataValues.bio_user,
             scores: [
               [responses[i].dataValues.smoke_user, responses[i].dataValues.smoke_roommate],
               [responses[i].dataValues.schedule_user, responses[i].dataValues.schedule_roommate],
@@ -68,6 +79,9 @@ router.get('/results',function(req,res){
               [responses[i].dataValues.music_user, responses[i].dataValues.music_roommate]
             ]
           });
+
+        // }
+
         }  
 
         // If you are the first person to sign up, create dummy data for the results table
@@ -77,7 +91,9 @@ router.get('/results',function(req,res){
               user_id: 0,
               email: "You are the first person to sign up, so no matches!",
               name: "Name goes here",
-              photoLink: "https://www.sitebuilderreport.com/assets/facebook-stock-up-08c6c9a855df26a3b13a34ac62bb75cc.jpg"
+              photoLink: "http://www.able2uk.com/media/k2/items/cache/6a90cca7c7eb6a9c4add1364d879cbc6_XL.jpg",
+              zip: "Users' zip codes will appear here.",
+              bio: "Users' biographies will appear here."
             },
             "compat": "None yet "}];
         }
@@ -158,6 +174,11 @@ router.post('/create', function (req, res) {
   // =========
   // use the Cat model to create a cat based on what's
   // passed in req.body (name, sleepy, user_id)
+
+  console.log("req.session.user_id:");
+  console.log(req.session.user_id);
+
+
   models.Response.create({
     smoke_user: req.body.smoke_user,
     smoke_roommate: req.body.smoke_roommate,
