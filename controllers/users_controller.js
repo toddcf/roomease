@@ -19,6 +19,7 @@ router.get('/sign-out', function(req,res) {
 });
 
 
+
 // login
 router.post('/login', function(req, res) {
   models.User.findOne({
@@ -53,7 +54,7 @@ router.post('/login', function(req, res) {
           // and the user's email.
           req.session.user_email = user.email;
 
-          res.redirect('/update/info');
+          res.redirect('/index/results');
         }
         // if the result is anything but true (password invalid)
         else{
