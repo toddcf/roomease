@@ -296,7 +296,7 @@ router.post('/results/send', function(req,res) {
 
 var mailOptions = {
     from:     'Noreply',
-    to:       'mluo0301@gmail.com',
+    to:       req.body.email,
     subject:  'Roomate Request',
     text:     'you have a submission with the following... Name: '+ req.body.name +'Email:'+ req.body.name+'Message: '+req.body.message,
     html:     '<p>you have a submission with the following...</p><ul><li>Name:'+req.body.name+'</li><li>Email:'+req.body.email+'<li>Message:'+ req.body.message+'</li></li></ul>'
