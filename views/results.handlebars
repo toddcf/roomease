@@ -89,150 +89,172 @@
 <form class="create-update-form" action="results/update/{{user_id}}?_method=PUT" method="POST">
     <h2>Roommate Compatibility</h2>
 
-      <h3><strong>Smoking</strong></h3>
-          <h4>Do you smoke?</h4>
-             <select class="chosen-select" id="smoke_user" name="smoke_user" required>
-                <option  name="smoke_user" value=""></option>
-               <option  name="smoke_user" value="1">Yes</option>
-              <option name="smoke_user" value="0">No</option>
-            </select>
 
-       <h4>Would you like a roommate who smokes?</h4>
-            <select data-placeholder="" class="chosen-select" id="smoke_roommate" name="smoke_roommate" required>
-              <option value=""></option>
-                    <option name="smoke_roommate" value="yes">Yes</option>
-                    <option name="smoke_roommate" value="no">No</option>
-                    <option name="smoke_roommate" value="dc">Don't care</option>
-            </select>
-      <h3><strong>Schedule</strong></h3>
-          <h4>Do you stay up late or get up early?</h4>
-              <select data-placeholder="" class="chosen-select" id="schedule_user" name="schedule_user" required>
-                      <option value=""></option>
-                      <option name="schedule_user" value="1">Get up early</option>
-                      <option name="schedule_user" value="0">Stay up late</option>
-              </select>
-          <h4>Do you prefer your roommate to stay up late or get up early?</h4>
-              <select data-placeholder="" class="chosen-select" id="schedule_roommate" name="schedule_roommate" required>
-                <option value=""></option>
-                      <option name="schedule_roommate" value="yes">Get up early</option>
-                      <option name="schedule_roommate" value="no">Stay up late</option>
-                      <option name="schedule_roommate" value="dc">Don't care</option>
+        <h3><strong>Smoking</strong></h3>
+        
+            <h4>Do you smoke?</h4>
+                <select class="chosen-select" id="smoke_user" name="smoke_user" required>
+                    <option  name="smoke_user" value=""></option>
+                    <option  name="smoke_user" value="1">Yes</option>
+                    <option name="smoke_user" value="0">No</option>
+                </select>
+
+           <h4>Would you like a roommate who smokes?</h4>
+                <select data-placeholder="" class="chosen-select" id="smoke_roommate" name="smoke_roommate" required>
+                    <option value=""></option>
+                        <option name="smoke_roommate" value="yes">Yes</option>
+                        <option name="smoke_roommate" value="no">No</option>
+                        <option name="smoke_roommate" value="dc">Don't care</option>
+                </select>
+
+    
+        <h3><strong>Schedule</strong></h3>
+            
+            <h4>Do you stay up late or get up early?</h4>
+                <select data-placeholder="" class="chosen-select" id="schedule_user" name="schedule_user" required>
+                    <option value=""></option>
+                    <option name="schedule_user" value="1">Get up early</option>
+                    <option name="schedule_user" value="0">Stay up late</option>
+                </select>
+            
+            <h4>Do you prefer your roommate to stay up late or get up early?</h4>
+                <select data-placeholder="" class="chosen-select" id="schedule_roommate" name="schedule_roommate" required>
+                    <option value=""></option>
+                    <option name="schedule_roommate" value="yes">Get up early</option>
+                    <option name="schedule_roommate" value="no">Stay up late</option>
+                    <option name="schedule_roommate" value="dc">Don't care</option>
               </select> 
 
-      <h3><strong>Personality</strong></h3>
-          <h4>Are you introverted or extroverted?</h4>
-              <select data-placeholder="" class="chosen-select" id="personality_user" name="personality_user" required>
-                  <option value=""></option>
-                      <option name="personality_user" value="1">Introverted</option>
-                      <option name="personality_user" value="0">Extroverted</option>
-              </select>
-          <h4>Do you prefer a roommate who is introverted or extroverted?</h4>
-              <select data-placeholder="" class="chosen-select" id="personality_roommate" name="personality_roommate" required>
-                  <option value=""></option>
-                      <option name="personality_roommate" value="yes">Introverted</option>
-                      <option name="personality_roommate" value="no">Extroverted</option>
-                      <option name="personality_roommate" value="dc">Don't care</option>
-              </select>
+
+        <h3><strong>Personality</strong></h3>
+            
+            <h4>Are you introverted or extroverted?</h4>
+                <select data-placeholder="" class="chosen-select" id="personality_user" name="personality_user" required>
+                    <option value=""></option>
+                    <option name="personality_user" value="1">Introverted</option>
+                    <option name="personality_user" value="0">Extroverted</option>
+                </select>
+            
+            <h4>Do you prefer a roommate who is introverted or extroverted?</h4>
+                <select data-placeholder="" class="chosen-select" id="personality_roommate" name="personality_roommate" required>
+                    <option value=""></option>
+                    <option name="personality_roommate" value="yes">Introverted</option>
+                    <option name="personality_roommate" value="no">Extroverted</option>
+                    <option name="personality_roommate" value="dc">Don't care</option>
+                </select>
 
 
-      <h3><strong>Parties</strong></h3>
-          <h4>Do you host parties at home?</h4>
-              <select data-placeholder="" class="chosen-select" id="parties_user" name="parties_user" required>
-                      <option name="parties_user" value=""></option>
-                      <option name="parties_user" value="1">Yes</option>
-                      <option name="parties_user" value="0">No</option>
-              </select>
-          <h4>Would you like a roommate who hosts parties at home?</h4>
-              <select data-placeholder="" class="chosen-select" id="parties_roommate" name="parties_roommate" required>
-                      <option value=""></option>
-                      <option name="parties_roommate" value="yes">Yes</option>
-                      <option name="parties_roommate" value="no">No</option>
-                      <option name="parties_roommate" value="dc">Don't care</option>
-              </select>
+        <h3><strong>Parties</strong></h3>
+            
+            <h4>Do you host parties at home?</h4>
+                <select data-placeholder="" class="chosen-select" id="parties_user" name="parties_user" required>
+                    <option name="parties_user" value=""></option>
+                    <option name="parties_user" value="1">Yes</option>
+                    <option name="parties_user" value="0">No</option>
+                </select>
+            
+            <h4>Would you like a roommate who hosts parties at home?</h4>
+                <select data-placeholder="" class="chosen-select" id="parties_roommate" name="parties_roommate" required>
+                    <option value=""></option>
+                    <option name="parties_roommate" value="yes">Yes</option>
+                    <option name="parties_roommate" value="no">No</option>
+                    <option name="parties_roommate" value="dc">Don't care</option>
+                </select>
 
 
-      <h3><strong>Friends</strong></h3>
-          <h4>How often do you have friends over?</h4>
-              <select data-placeholder="" class="chosen-select" id="friends_user" name="friends_user" required>
-                      <option value=""></option>
-                      <option name="friends_user" value="1">Occasionally</option>
-                      <option name="friends_user" value="0">Often</option>
-              </select>
-          <h4>How often would you like your roommate to have friends over?</h4>
-              <select data-placeholder="" class="chosen-select" id="friends_roommate" name="friends_roommate" required>
-                  <option value=""></option>
-                      <option name="friends_roommate" value="yes">Occasionally</option>
-                      <option name="friends_roommate" value="no">Often</option>
-                      <option name="friends_roommate" value="dc">Don't care</option>
-              </select>
-
-      <h3><strong>Pets</strong></h3>
-          <h4>Do you have pets?</h4>
-              <select data-placeholder="" class="chosen-select" id="pets_user" name="pets_user" required>
-                      <option value=""></option>
-                      <option name="pets_user" value="1">Yes</option>
-                      <option name="pets_user" value="0">No</option>
-              </select>
-          <h4>Would you like your roommate to have pets?</h4>
-              <select data-placeholder="" class="chosen-select" id="pets_roommate" name="pets_roommate" required>
-                  <option value=""></option>
-                      <option name="pets_roommate" value="yes">Yes</option>
-                      <option name="pets_roommate" value="no">No</option>
-                      <option name="pets_roommate" value="dc">Don't care</option>
-              </select>
-
-      <h3><strong>Cleanliness</strong></h3>
-          <h4>Are you neat or messy?</h4>
-              <select data-placeholder="" class="chosen-select" id="cleanliness_user" name="cleanliness_user" required>
-                      <option value=""></option>
-                      <option name="cleanliness_user" value="1">Neat</option>
-                      <option name="cleanliness_user" value="0">Messy</option>
-              </select>
-          <h4>Would you prefer your roommate to be neat or messy?</h4>
-              <select data-placeholder="" class="chosen-select" id="cleanliness_roommate" name="cleanliness_roommate" required>
-                  <option value=""></option>
-                      <option name="cleanliness_roommate" value="yes">Neat</option>
-                      <option name="cleanliness_roommate" value="no">Messy</option>
-                      <option name="cleanliness_roommate" value="dc">Don't care</option>
-              </select>
+        <h3><strong>Friends</strong></h3>
+            
+            <h4>How often do you have friends over?</h4>
+                <select data-placeholder="" class="chosen-select" id="friends_user" name="friends_user" required>
+                    <option value=""></option>
+                    <option name="friends_user" value="1">Occasionally</option>
+                    <option name="friends_user" value="0">Often</option>
+                </select>
+          
+            <h4>How often would you like your roommate to have friends over?</h4>
+                <select data-placeholder="" class="chosen-select" id="friends_roommate" name="friends_roommate" required>
+                    <option value=""></option>
+                    <option name="friends_roommate" value="yes">Occasionally</option>
+                    <option name="friends_roommate" value="no">Often</option>
+                    <option name="friends_roommate" value="dc">Don't care</option>
+                </select>
 
 
-      <h3><strong>Music</strong></h3>
-          <h4>Do you like to listen to music?</h4>
-              <select data-placeholder="" class="chosen-select" id="music_user" name="music_user" required>
-                  <option value=""></option>
-                      <option  name="music_user" value="1">Yes</option>
-                      <option  name="music_user" value="0">No</option>
-              </select>
-          <h4>Would you like a roommate who listens to music?</h4>
-              <select data-placeholder="" class="chosen-select" id="music_roommate" name="music_roommate" required>
-                  <option value=""></option>
-                      <option name="music_roommate" value="yes">Yes</option>
-                      <option name="music_roommate" value="no">No</option>
-                      <option name="music_roommate" value="dc">Don't care</option>
-              </select>
+        <h3><strong>Pets</strong></h3>
 
-      <br>
+            <h4>Do you have pets?</h4>
+                <select data-placeholder="" class="chosen-select" id="pets_user" name="pets_user" required>
+                    <option value=""></option>
+                    <option name="pets_user" value="1">Yes</option>
+                    <option name="pets_user" value="0">No</option>
+                </select>
 
-      <h2>Upload your picture</h2>
-      <input type="url" name="imageicon_user"placeholder="URL Link" required>
-      <br>
-      <h2>Bio</h2>
-      <input type="text" name="bio_user"placeholder="HI,I am a second year undergraduate student at UCLA" required>
-      <br>
-      <h2>What's your zipcode?</h2>
-      <input type="number" name="zipcode_user"placeholder="91000" required>
-      <br>
-      <br>
+            <h4>Would you like your roommate to have pets?</h4>
+                <select data-placeholder="" class="chosen-select" id="pets_roommate" name="pets_roommate" required>
+                    <option value=""></option>
+                    <option name="pets_roommate" value="yes">Yes</option>
+                    <option name="pets_roommate" value="no">No</option>
+                    <option name="pets_roommate" value="dc">Don't care</option>
+                </select>
 
-      <div class="fliter-button">
-          <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
-      </div>
-          </form>
-      </div> 
- </div>
 
- <script>
+        <h3><strong>Cleanliness</strong></h3>
+            
+            <h4>Are you neat or messy?</h4>
+                <select data-placeholder="" class="chosen-select" id="cleanliness_user" name="cleanliness_user" required>
+                    <option value=""></option>
+                    <option name="cleanliness_user" value="1">Neat</option>
+                    <option name="cleanliness_user" value="0">Messy</option>
+                </select>
+            
+            <h4>Would you prefer your roommate to be neat or messy?</h4>
+                <select data-placeholder="" class="chosen-select" id="cleanliness_roommate" name="cleanliness_roommate" required>
+                    <option value=""></option>
+                    <option name="cleanliness_roommate" value="yes">Neat</option>
+                    <option name="cleanliness_roommate" value="no">Messy</option>
+                    <option name="cleanliness_roommate" value="dc">Don't care</option>
+                </select>
+
+
+        <h3><strong>Music</strong></h3>
+            
+            <h4>Do you like to listen to music?</h4>
+                <select data-placeholder="" class="chosen-select" id="music_user" name="music_user" required>
+                    <option value=""></option>
+                    <option  name="music_user" value="1">Yes</option>
+                    <option  name="music_user" value="0">No</option>
+                </select>
+            
+            <h4>Would you like a roommate who listens to music?</h4>
+                <select data-placeholder="" class="chosen-select" id="music_roommate" name="music_roommate" required>
+                    <option value=""></option>
+                    <option name="music_roommate" value="yes">Yes</option>
+                    <option name="music_roommate" value="no">No</option>
+                    <option name="music_roommate" value="dc">Don't care</option>
+                </select>
+
+        <br>
+
+        <h2>Upload your picture</h2>
+        <input type="url" name="imageicon_user"placeholder="URL Link" required>
+        <br>
+        <h2>Bio</h2>
+        <input type="text" name="bio_user"placeholder="HI,I am a second year undergraduate student at UCLA" required>
+        <br>
+        <h2>What's your zipcode?</h2>
+        <input type="number" name="zipcode_user"placeholder="91000" required>
+        <br>
+        <br>
+
+        <div class="fliter-button">
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+        </div>
+            </form>
+        </div> 
+    </div>
+
+<script>
+
 var flitermodal =  document.getElementById('flitermodal');
 var closebtn =  document.getElementsByClassName('fliter-modal-close')[0];
 var openbtn =  document.getElementById('hideBar');
@@ -261,7 +283,3 @@ window.onclick = function(event) {
     }
 }
 </script>
-
-
-
-
