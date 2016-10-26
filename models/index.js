@@ -12,7 +12,7 @@ else
     var sequelize = new Sequelize(config.database, config.username, config.password, config);
 
 
-var db        = {};
+var db = {};
 
 fs
     .readdirSync(__dirname)
